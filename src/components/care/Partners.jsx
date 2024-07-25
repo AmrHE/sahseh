@@ -18,7 +18,7 @@ const Partners = ({ sahsehCareContent, mediaFiles }) => {
 					</div>
 
 					<div className="relative flex justify-center mt-4">
-						<Image src={careEye} alt="partners" />
+						<Image src={careEye} alt="partners" priority />
 						{/* <Image src={sunglasses} alt="decor-1" />
 						<Image src={sun} alt="decor-2" /> */}
 					</div>

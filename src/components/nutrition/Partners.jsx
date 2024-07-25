@@ -30,7 +30,12 @@ const Partners = ({ mediaFiles, nutritionContent }) => {
 						height={109}
 						className="absolute block lg:hidden ltr:flip_image rtl:right-0 ltr:left-0 top-[65%]"
 					/>
-					<Image src={nutritionEye} alt="partners" className="pb-40 lg:pb-0" />
+					<Image
+						src={nutritionEye}
+						priority
+						alt="partners"
+						className="pb-40 lg:pb-0"
+					/>
 					<Image
 						src={decoration_2}
 						alt="partners"

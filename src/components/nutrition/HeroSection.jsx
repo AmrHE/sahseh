@@ -16,6 +16,7 @@ const HeroSection = ({ mediaFiles, nutritionContent }) => {
 				className="absolute block sm:hidden -z-10"
 				alt="hero"
 				fill
+				priority
 				objectFit="cover"
 			/>
 			<Image
@@ -23,12 +24,14 @@ const HeroSection = ({ mediaFiles, nutritionContent }) => {
 				className="absolute hidden sm:block xl:hidden -z-10"
 				alt="hero"
 				fill
+				priority
 				objectFit="cover"
 			/>
 			<Image
 				src={heroImg}
 				className="absolute hidden xl:block -z-10"
 				alt="hero"
+				priority
 			/>
 			<div className="container flex flex-col items-center px-5 lg:flex-row">
 				<div className="h-full basis-1/2 lg:py-40 py-14">

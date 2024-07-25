@@ -10,6 +10,7 @@ const HeroSection = ({ sahsehCareContent, mediaFiles }) => {
 	return (
 		<div className="pt-24 lg:pt-[140px] min-h-[70vh] sm:min-h-[100vh] lg:min-h-[125vh] relative">
 			<Image
+				priority
 				src={heroImgMob}
 				className="absolute block sm:hidden -z-10"
 				alt="hero"
@@ -17,6 +18,7 @@ const HeroSection = ({ sahsehCareContent, mediaFiles }) => {
 				objectFit="cover"
 			/>
 			<Image
+				priority
 				src={heroImgTablet}
 				className="absolute hidden sm:block xl:hidden -z-10"
 				alt="hero"
@@ -24,6 +26,7 @@ const HeroSection = ({ sahsehCareContent, mediaFiles }) => {
 				objectFit="cover"
 			/>
 			<Image
+				priority
 				src={heroImg}
 				className="absolute hidden xl:block -z-10"
 				alt="hero"

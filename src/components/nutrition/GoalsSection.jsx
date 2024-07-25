@@ -9,8 +9,13 @@ const GoalsSection = ({ nutritionContent, mediaFiles }) => {
 	return (
 		<div className="flex flex-col gap-10 mx-5 mt-24">
 			<div className="relative flex items-center justify-center ">
-				<Image src={goals} alt="goals" className="hidden lg:block" />
-				<Image src={goalsMob} alt="goals mobile" className="block lg:hidden" />
+				<Image src={goals} priority alt="goals" className="hidden lg:block" />
+				<Image
+					src={goalsMob}
+					priority
+					alt="goals mobile"
+					className="block lg:hidden"
+				/>
 				<Image src={eclipse} alt="eclipse" className="absolute" />
 			</div>
 
