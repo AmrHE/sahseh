@@ -1,15 +1,21 @@
+'use client';
+
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const LanguageSwitcher = () => {
-	const { locales, asPath } = useRouter();
+	const { locales, asPath, locale } = useRouter();
+
+	// console.log(locales.filter((loc) => loc !== locale));
 	return (
 		<div>
-			{locales.map((locale) => (
-				<Link href={asPath} locale={locale} key={locale}>
-					{locale}
-				</Link>
-			))}
+			{locales
+				.filter((loc) => loc !== locale)
+				.map((locale) => (
+					<Link href={asPath} locale={locale} key={locale}>
+						{locale.split('-')[0]}
+					</Link>
+				))}
 		</div>
 	);
 };
