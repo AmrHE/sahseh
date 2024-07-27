@@ -22,7 +22,7 @@ const CouponSection = ({ aboutContent, mediaFiles }) => {
 				</button>
 			</div>
 			<div className="flex justify-center px-12 md:px-0 md:justify-end basis-1/2">
-				<Image src={couponImg} alt="test" />
+				<Image src={couponImg} alt="coupon image" className="ltr:flip_image" />
 			</div>
 		</div>
 	);

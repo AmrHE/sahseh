@@ -13,7 +13,7 @@ const HeroSection = ({ mediaFiles, nutritionContent }) => {
 		<div className="pt-24 lg:pt-[140px] min-h-[70vh] sm:min-h-[100vh] lg:min-h-[125vh] relative">
 			<Image
 				src={heroImgMob}
-				className="absolute block sm:hidden -z-10"
+				className="absolute block sm:hidden -z-10 ltr:flip_image"
 				alt="hero"
 				fill
 				priority
@@ -21,7 +21,7 @@ const HeroSection = ({ mediaFiles, nutritionContent }) => {
 			/>
 			<Image
 				src={heroImgTablet}
-				className="absolute hidden sm:block xl:hidden -z-10"
+				className="absolute hidden sm:block xl:hidden -z-10 ltr:flip_image"
 				alt="hero"
 				fill
 				priority
@@ -29,7 +29,7 @@ const HeroSection = ({ mediaFiles, nutritionContent }) => {
 			/>
 			<Image
 				src={heroImg}
-				className="absolute hidden xl:block -z-10"
+				className="absolute hidden xl:block -z-10 ltr:flip_image"
 				alt="hero"
 				priority
 			/>

@@ -162,8 +162,8 @@ const Navbar = () => {
 						{/* CALL TO ACTION BUTTON */}
 						<div className="md:mx-5 md:inline-block">
 							<button
-								onClick={() => router.push('/register')}
-								className="px-8 py-5 text-sm font-semibold text-black transition duration-300 lg:text-base hover:bg-white bg-yellow-primary rounded-xl"
+								onClick={() => router.push('/register-now')}
+								className="px-8 py-5 text-sm font-semibold text-black capitalize transition duration-300 lg:text-base hover:bg-white bg-yellow-primary rounded-xl"
 							>
 								{CTA}
 							</button>

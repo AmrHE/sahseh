@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import * as Yup from 'yup';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import PhoneInput from 'react-phone-input-2';
-
+import Image from 'next/image';
 import { client } from '../../src/libs/contentful';
 import { useContentContext } from '../../src/context/ContentContext';
-
-import 'react-phone-input-2/lib/style.css';
-import Form2 from '../../src/components/register/Form2';
-import Image from 'next/image';
+import RegisterForm from '../../src/components/register/Form';
 
 import banner from '../../public/register-banner.svg';
+import 'react-phone-input-2/lib/style.css';
 
 const RegisterNow = ({ registerNowData }) => {
 	const { setNavbar, mediaFiles, setMediaFiles, setFooter } =
 		useContentContext();
 	const [submitted, setSubmitted] = useState(false);
+
+	console.log({ registerNowData });
 
 	useEffect(() => {
 		setSubmitted(JSON.parse(localStorage?.getItem('isSubmitted')));
@@ -35,22 +32,24 @@ const RegisterNow = ({ registerNowData }) => {
 			<div className="bg-register-gradient">
 				<div className="container pt-24 px-52 lg:pt-40">
 					<h1 className="text-[46px] mt-12 mb-10 text-center font-bold">
-						شكرا لثقتكم الغالية في صح صح
+						{registerNowData.registerPageContent.header}
 					</h1>
 					<div className="p-5 my-5 shadow-2xl rounded-[20px] bg-white">
-						<Image src={banner} alt="banner" className="rounded-t-[20px]" />
+						<Image
+							src={banner}
+							alt="banner"
+							className="rounded-t-[20px] ltr:flip_image"
+						/>
 						{submitted ? (
 							<div className="text-[26px] px-[30px] py-5 bg-[#4CC65025] rounded-b-[20px] text-center">
-								تم تعبئة البيانات بنجاح و سيتم التواصل معكم عن طريق فريق عمل صح
-								صح
+								{registerNowData.registerPageContent.subheaderSuccess}
 							</div>
 						) : (
 							<div className="text-[26px] px-[30px] py-5 bg-[#4CC65025] text-center rounded-b-[20px]">
-								لتفعيل مبادرة صح صح لدى موظفيكم برجاء تعبئة البيانات و سيتم
-								التواصل معكم في اقرب وقت
+								{registerNowData.registerPageContent.subheaderRegister}
 							</div>
 						)}
-						<Form2 />
+						<RegisterForm registerNowData={registerNowData} />
 					</div>
 				</div>
 			</div>
@@ -67,6 +66,18 @@ export async function getStaticProps({ locale }) {
 	const footer = await client.getEntry('7Hmn6qQE2OZ6X4mkzoSfwe', {
 		locale,
 	});
+	const cities = await client.getEntry('5e9KIPwH0o14TAFynHz5RV', {
+		locale,
+	});
+	const orgTypes = await client.getEntry('6wK9Z3XoZWWVIJhmEdrLe2', {
+		locale,
+	});
+	const methods = await client.getEntry('NVRI0Zy6dUoPzqFbds88o', {
+		locale,
+	});
+	const registerPageContent = await client.getEntry('ZpMYjjHzHpOiHToXiZW81', {
+		locale,
+	});
 	// const registerNow = await client.getEntry('NeVSDOOvG5rZTk3QXvlVZ', {
 	// 	locale,
 	// });
@@ -75,6 +86,10 @@ export async function getStaticProps({ locale }) {
 		props: {
 			registerNowData: {
 				// registerNow: registerNow.fields,
+				registerPageContent: registerPageContent.fields,
+				cities: cities.fields,
+				orgTypes: orgTypes.fields,
+				methods: methods.fields,
 				navbar: navbar.fields,
 				footer: footer.fields,
 				logo: logo.fields.file,

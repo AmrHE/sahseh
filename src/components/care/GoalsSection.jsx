@@ -6,7 +6,7 @@ import Image from 'next/image';
 const GoalsSection = ({ sahsehCareContent, mediaFiles }) => {
 	return (
 		<div className="flex flex-col gap-10 mx-5 mt-24 xl:flex-row lg:mt-52">
-			<Image src={goalsBox} alt="goalsBox" />
+			<Image src={goalsBox} alt="goalsBox" className="ltr:flip_image" />
 			<div className="lg:mt-28">
 				<p className="font-bold text-[22px] lg:text-[40px] leading-10 text-[#284BC9]">
 					{sahsehCareContent.goalsTitle}

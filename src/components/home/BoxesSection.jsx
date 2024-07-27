@@ -23,7 +23,7 @@ const BoxesSection = ({ mediaFiles, homeContent }) => {
 				</p>
 				<button
 					className="w-5/6 py-3 my-12 text-2xl font-semibold text-white transition duration-300 sm:w-2/3 lg:h-20 lg:w-96 rounded-xl bg-green-primary hover:bg-yellow-primary hover:text-black"
-					onClick={() => router.push('/register')}
+					onClick={() => router.push('/register-now')}
 				>
 					{homeContent?.boxesSectionCta}
 				</button>

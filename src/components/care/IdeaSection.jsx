@@ -19,13 +19,13 @@ const IdeaSection = ({ sahsehCareContent, mediaFiles }) => {
 					src={bulb}
 					id="large"
 					alt="light-bulb"
-					className="absolute hidden -translate-y-1/2 rtl:translate-x-10 ltr:-translate-x-10 lg:block"
+					className="absolute hidden -translate-y-1/2 ltr:flip_image rtl:translate-x-10 ltr:-translate-x-10 lg:block"
 				/>
 				<Image
 					id="small"
 					src={bulbMob}
 					alt="light-bulb"
-					className="absolute block -translate-y-1/2 lg:hidden"
+					className="absolute block -translate-y-1/2 ltr:flip_image lg:hidden"
 				/>
 				<p className="m-5 lg:my-10 lg:rtl:mr-60 lg:ltr:ml-60  lg:rtl:ml-11 lg:ltr:mr-11 rtl:mr-28 ltr:ml-mr-28 text-sm lg:text-[26px] leading-[181%]">
 					{sahsehCareContent.ideaDescription}
@@ -35,12 +35,12 @@ const IdeaSection = ({ sahsehCareContent, mediaFiles }) => {
 			<Image
 				src={decoration}
 				alt="decoration"
-				className="absolute hidden -top-32 lg:block rtl:left-0 ltr:right-0"
+				className="absolute hidden ltr:flip_image -top-32 lg:block rtl:left-0 ltr:right-0"
 			/>
 			<Image
 				src={decorationMob}
 				alt="decoration"
-				className="absolute block -top-32 rtl:left-0 lg:hidden ltr:right-0"
+				className="absolute block ltr:flip_image -top-32 rtl:left-0 lg:hidden ltr:right-0"
 			/>
 		</div>
 	);

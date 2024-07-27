@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 const LanguageSwitcher = () => {
 	const { locales, asPath, locale } = useRouter();
 
-	// console.log(locales.filter((loc) => loc !== locale));
 	return (
 		<div>
 			{locales

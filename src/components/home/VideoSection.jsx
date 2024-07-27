@@ -2,7 +2,7 @@ import React from 'react';
 import { Player, BigPlayButton, ControlBar } from 'video-react';
 import { useContentContext } from '../../context/ContentContext';
 
-import 'video-react/dist/video-react.css'; // import css
+import 'video-react/dist/video-react.css';
 
 const VideoSection = () => {
 	const { mediaFiles } = useContentContext();
@@ -29,7 +29,6 @@ const VideoSection = () => {
 						<div className="basis-1/2">
 							<Player
 								fluid={true}
-								poster="/public/about-nutrition.png"
 								src={`https:${mediaFiles?.nutritionVideo?.url}`}
 							>
 								<BigPlayButton position="center" />
@@ -37,11 +36,7 @@ const VideoSection = () => {
 							</Player>
 						</div>
 						<div className="basis-1/2">
-							<Player
-								fluid={true}
-								poster="../../../public/about-care.png"
-								src={`https:${mediaFiles?.careVideo?.url}`}
-							>
+							<Player fluid={true} src={`https:${mediaFiles?.careVideo?.url}`}>
 								<BigPlayButton position="center" />
 								<ControlBar disableCompletely />
 							</Player>

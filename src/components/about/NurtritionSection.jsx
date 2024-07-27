@@ -27,7 +27,11 @@ const NurtritionSection = ({ aboutContent, mediaFiles }) => {
 				</button>
 			</div>
 			<div className="flex justify-center px-12 md:px-0 md:justify-end basis-1/2">
-				<Image src={nutritionImg} alt="test" />
+				<Image
+					src={nutritionImg}
+					alt="nutrition image"
+					className="ltr:flip_image"
+				/>
 			</div>
 		</div>
 	);

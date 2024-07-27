@@ -47,11 +47,11 @@ const AboutSection = ({ homeContent, mediaFiles }) => {
 							/>
 						)}
 
-						<p className="text-[#FFF4DA] font-medium text-base lg:text-[28px]">
+						<p className="text-[#FFF4DA] font-medium text-base lg:text-[28px] capitalize">
 							{homeContent?.aboutFirstCardTitle}
 						</p>
 						<div className="size-9 lg:size-14 rounded-full bg-gradient-to-b from-[#005B2F] to-[#1CAC77] flex items-center justify-center text-white">
-							<MoveUpLeft size={30} />
+							<MoveUpLeft size={30} className="ltr:flip_image" />
 						</div>
 					</div>
 					<div className="flex items-center justify-end basis-1/2">
@@ -76,6 +76,7 @@ const AboutSection = ({ homeContent, mediaFiles }) => {
 										? 208
 										: 40
 								}
+								className="ltr:flip_image"
 								alt="sahseh nutrition"
 							/>
 						)}
@@ -110,11 +111,11 @@ const AboutSection = ({ homeContent, mediaFiles }) => {
 							/>
 						)}
 
-						<p className="text-[#FFF4DA] font-medium text-base lg:text-[28px]">
+						<p className="text-[#FFF4DA] font-medium text-base lg:text-[28px] capitalize">
 							{homeContent?.aboutSecondCardTitle}
 						</p>
 						<div className="size-9 lg:size-14 rounded-full cursor-pointer bg-gradient-to-b from-[#C3BABA] to-[#FFFFFF] flex items-center justify-center">
-							<MoveUpLeft size={30} />
+							<MoveUpLeft size={30} className="ltr:flip_image" />
 						</div>
 					</div>
 					<div className="flex items-center justify-end basis-1/2">
@@ -139,6 +140,7 @@ const AboutSection = ({ homeContent, mediaFiles }) => {
 										? 300
 										: 151
 								}
+								className="ltr:flip_image"
 								alt="sahseh care"
 							/>
 						)}
@@ -173,10 +175,10 @@ const AboutSection = ({ homeContent, mediaFiles }) => {
 							/>
 						)}
 
-						<p className="text-[#FFF4DA] font-medium text-base lg:text-[28px]">
+						<p className="text-[#FFF4DA] font-medium text-base lg:text-[28px] capitalize">
 							{homeContent?.aboutThirdCardTitle}
 						</p>
-						<div className="flex items-center justify-center rounded-full size-9 lg:size-14 text-white font-medium text-base lg:text-[28px]">
+						<div className="flex items-center justify-center rounded-full size-9 capitalize lg:size-14 text-white font-medium text-base lg:text-[28px]">
 							{homeContent?.soon}
 						</div>
 					</div>
@@ -202,6 +204,7 @@ const AboutSection = ({ homeContent, mediaFiles }) => {
 										? 300
 										: 151
 								}
+								className="ltr:flip_image"
 								alt="sahseh nutrition"
 							/>
 						)}

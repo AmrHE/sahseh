@@ -12,7 +12,7 @@ const HeroSection = ({ sahsehCareContent, mediaFiles }) => {
 			<Image
 				priority
 				src={heroImgMob}
-				className="absolute block sm:hidden -z-10"
+				className="absolute block sm:hidden -z-10 ltr:flip_image"
 				alt="hero"
 				fill
 				objectFit="cover"
@@ -20,7 +20,7 @@ const HeroSection = ({ sahsehCareContent, mediaFiles }) => {
 			<Image
 				priority
 				src={heroImgTablet}
-				className="absolute hidden sm:block xl:hidden -z-10"
+				className="absolute hidden sm:block xl:hidden -z-10 ltr:flip_image"
 				alt="hero"
 				fill
 				objectFit="cover"
@@ -28,7 +28,7 @@ const HeroSection = ({ sahsehCareContent, mediaFiles }) => {
 			<Image
 				priority
 				src={heroImg}
-				className="absolute hidden xl:block -z-10"
+				className="absolute hidden xl:block -z-10 ltr:flip_image"
 				alt="hero"
 			/>
 			<div className="container flex flex-col items-center px-5 lg:flex-row">

@@ -64,7 +64,7 @@ function MultipleItems() {
 					mediaFiles?.sliderImages.map((item, i) => (
 						<div key={i} className="px-2 outline-none lg:px-5">
 							<Image
-								className="rounded-xl"
+								className="rounded-xl ltr:flip_image"
 								src={`http:${item.fields.file['en-US'].url}`}
 								alt=""
 								width={387}
@@ -76,7 +76,7 @@ function MultipleItems() {
 					mediaFiles?.sliderImages.map((item, i) => (
 						<div key={i} className="px-2 outline-none lg:px-5">
 							<Image
-								className="rounded-xl"
+								className="rounded-xl ltr:flip_image"
 								src={`http:${item.fields.file['en-US'].url}`}
 								alt=""
 								width={387}
@@ -88,7 +88,7 @@ function MultipleItems() {
 					mediaFiles?.sliderImages.map((item, i) => (
 						<div key={i} className="px-2 outline-none lg:px-5">
 							<Image
-								className="rounded-xl"
+								className="rounded-xl ltr:flip_image"
 								src={`http:${item.fields.file['en-US'].url}`}
 								alt=""
 								width={387}

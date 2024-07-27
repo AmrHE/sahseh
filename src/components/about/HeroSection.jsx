@@ -5,7 +5,7 @@ import Image from 'next/image';
 const HeroSection = () => {
 	return (
 		<div className="pt-24 lg:pt-32">
-			<Image src={heroImg} />
+			<Image src={heroImg} alt="hero image" />
 		</div>
 	);
 };

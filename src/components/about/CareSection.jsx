@@ -21,13 +21,13 @@ const CareSection = ({ aboutContent, mediaFiles }) => {
 				</p>
 				<button
 					className="w-full py-3 my-12 text-2xl font-semibold text-white transition duration-300 hover:text-black sm:w-2/3 lg:h-16 lg:w-80 rounded-xl bg-blue-primary hover:bg-yellow-primary"
-					onClick={() => router.push('/register')}
+					onClick={() => router.push('/register-now')}
 				>
 					{aboutContent.careCta}
 				</button>
 			</div>
 			<div className="flex justify-center px-12 md:px-0 md:justify-start basis-1/2">
-				<Image src={careImg} alt="test" />
+				<Image src={careImg} alt="care image" className="ltr:flip_image" />
 			</div>
 		</div>
 	);

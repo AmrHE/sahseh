@@ -44,7 +44,13 @@ const Hero = ({ homeContent, mediaFiles }) => {
 						)}
 						<div className="absolute space-y-8 lg:space-y-16 bottom-10 lg:bottom-0 lg:top-[10%] lg:rtl:left-[4%] lg:ltr:right-[4%] text-white px-5 md:px-10 lg:px-0">
 							<div className="space-y-4">
-								<Image src={adsSun} width={100} height={50} alt="ads-sun" />
+								<Image
+									src={adsSun}
+									width={100}
+									height={50}
+									alt="ads-sun"
+									className="ltr:flip_image"
+								/>
 								<p className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-[120%]">
 									{homeContent.heroAdsTitle}
 								</p>

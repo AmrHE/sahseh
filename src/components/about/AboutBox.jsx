@@ -17,7 +17,7 @@ const AboutBox = ({ aboutContent, mediaFiles }) => {
 					<Image
 						src={birds}
 						alt="birds"
-						className="absolute bottom-0 hidden -translate-x-1/2 translate-y-1/2 lg:block rtl:left-0 ltr:right-0"
+						className="absolute bottom-0 hidden -translate-x-1/2 translate-y-1/2 ltr:flip_image lg:block rtl:left-0 ltr:right-0"
 					/>
 				</div>
 			</div>

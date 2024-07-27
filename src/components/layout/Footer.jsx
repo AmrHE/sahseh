@@ -78,7 +78,7 @@ const Footer = () => {
 						<Link href="/coupon">
 							<p className="cursor-wait">{footer?.coupon}</p>
 						</Link>
-						<Link href="/register">
+						<Link href="/register-now">
 							<p className="cursor-pointer">{footer?.register}</p>
 						</Link>
 					</div>
