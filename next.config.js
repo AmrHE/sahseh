@@ -1,6 +1,9 @@
+const { withNextVideo } = require('next-video/process');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	reactStrictMode: true,
+	// output: 'export',
+	reactStrictMode: false,
 	swcMinify: true,
 	i18n: {
 		locales: ['en-US', 'ar-SA'],
@@ -10,14 +13,11 @@ const nextConfig = {
 	images: {
 		remotePatterns: [
 			{
-				// protocol: 'http',
 				hostname: 'images.ctfassets.net',
 				port: '',
-				// pathname: '/img/**',
 			},
 		],
 	},
-	// images: { domains: [''] },
 };
 
-module.exports = nextConfig;
+module.exports = withNextVideo(nextConfig);
