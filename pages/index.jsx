@@ -19,6 +19,8 @@ export default function Home({ homePageData }) {
 		setMediaFiles({
 			...mediaFiles,
 			logo: homePageData.logo,
+			nutritionVideo: homePageData.nutritionVideo,
+			careVideo: homePageData.careVideo,
 			homeBoxes: homePageData.homeBoxes,
 			careLogo: homePageData.careLogo,
 			couponLogo: homePageData.couponLogo,
@@ -74,6 +76,8 @@ export async function getStaticProps({ locale }) {
 		locale,
 	});
 	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz');
+	const nutritionVideo = await client.getAsset('3156i0jym2nENNa4biwltz');
+	const careVideo = await client.getAsset('4D1giDsFo8wfsJWzsZGBZ4');
 	const couponLogo = await client.getAsset('tiYfuNDOSWFFfSZRIvL7I');
 	const careLogo = await client.getAsset('4acavYIbVXnmQ2NGhWRFja');
 	const ad = await client.getAsset('1qKY2fYfXH3IK3BMLAx7Qq');
@@ -96,6 +100,8 @@ export async function getStaticProps({ locale }) {
 				navbar: navbar.fields,
 				footer: footer.fields,
 				logo: logo.fields.file,
+				nutritionVideo: nutritionVideo.fields.file,
+				careVideo: careVideo.fields.file,
 				careLogo: careLogo.fields.file,
 				couponLogo: couponLogo.fields.file,
 				ad: ad.fields.file,
