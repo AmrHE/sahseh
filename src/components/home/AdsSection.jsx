@@ -36,12 +36,7 @@ const AdsSection = ({ homeContent, mediaFiles }) => {
 					/>
 				</div>
 			</div>
-			<Image
-				src={adsBottom}
-				className="-mt-1"
-				// width={screen}
-				alt="ads-bottom"
-			/>
+			<Image src={adsBottom} className="-mt-1" alt="ads-bottom" />
 		</div>
 	);
 };

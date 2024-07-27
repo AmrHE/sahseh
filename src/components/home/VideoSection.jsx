@@ -52,7 +52,7 @@ const VideoSection = () => {
 					</div>
 				</div>
 			</div>
-			<div className="bg-[url('../public/video-image.png')] min-h-[670px] md:min-h-[800px] lg:min-h-[670px] min-w-full" />
+			<div className="bg-video-image min-h-[670px] md:min-h-[800px] lg:min-h-[670px] min-w-full" />
 		</div>
 	);
 };

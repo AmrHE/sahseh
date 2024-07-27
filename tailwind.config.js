@@ -45,6 +45,7 @@ module.exports = {
 				'nutrition_partners-gradient':
 					'linear-gradient(90deg, #f5f5f5 0%, #C4E8C5 63%)',
 				'register-gradient': 'linear-gradient(180deg, #95C4C2 0%, #ffffff 31%)',
+				'video-image': "url('/video-image.png')",
 			},
 		},
 	},
