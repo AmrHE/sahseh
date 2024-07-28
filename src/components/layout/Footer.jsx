@@ -25,28 +25,32 @@ const Footer = () => {
 				{/* LOGO + TITLE + DESCROPTION */}
 				<div className="flex flex-col gap-8 lg:flex-row basis-1/2">
 					{/* DESKTOP LOGO */}
-					<div className="hidden w-40 lg:block">
-						{mediaFiles.logo && (
-							<Image
-								src={`http:${mediaFiles?.logo?.url}`}
-								width={100}
-								height={100}
-								alt="sahseh logo"
-							/>
-						)}
-					</div>
+					<Link href="/">
+						<div className="hidden w-40 lg:block">
+							{mediaFiles.logo && (
+								<Image
+									src={`http:${mediaFiles?.logo?.url}`}
+									width={100}
+									height={100}
+									alt="sahseh logo"
+								/>
+							)}
+						</div>
+					</Link>
 
 					{/* MOBILE LOGO */}
-					<div className="block lg:hidden">
-						{mediaFiles.logo && (
-							<Image
-								src={`http:${mediaFiles?.logo?.url}`}
-								width={65}
-								height={65}
-								alt="sahseh logo"
-							/>
-						)}
-					</div>
+					<Link href="/">
+						<div className="block lg:hidden">
+							{mediaFiles.logo && (
+								<Image
+									src={`http:${mediaFiles?.logo?.url}`}
+									width={65}
+									height={65}
+									alt="sahseh logo"
+								/>
+							)}
+						</div>
+					</Link>
 
 					{/* TITLE & DESCRIPTION */}
 					<div className="text-white">
@@ -63,7 +67,7 @@ const Footer = () => {
 				<div className="flex lg:basis-1/2">
 					{/* ITEMS */}
 					<div className="grid grid-cols-2 text-white capitalize lg:text-xl gap-y-16 basis-full lg:basis-2/3">
-						<Link href="/home">
+						<Link href="/">
 							<p className="cursor-pointer">{footer?.home}</p>
 						</Link>
 						<Link href="/about-us">
@@ -75,9 +79,6 @@ const Footer = () => {
 						<Link href="/sahseh-care">
 							<p className="cursor-pointer">{footer?.care}</p>
 						</Link>
-						{/* <Link href="/coupon">
-							<p className="cursor-wait">{footer?.coupon}</p>
-						</Link> */}
 						<Link href="/register-now">
 							<p className="cursor-pointer">{footer?.register}</p>
 						</Link>
@@ -104,18 +105,18 @@ const Footer = () => {
 			<div className="container flex justify-between my-16">
 				{/* SOCIAL MEDIA ICONS */}
 				<div className="hidden gap-6 lg:flex">
-					<div className="cursor-pointer">
+					<Link href="" className="cursor-pointer">
 						<Image src={facebook} width={40} height={40} alt="facebook" />
-					</div>
-					<div className="cursor-pointer">
+					</Link>
+					<Link href="https://x.com/Sahsehksa" className="cursor-pointer">
 						<Image src={twitter} width={40} height={40} alt="twitter" />
-					</div>
-					<div className="cursor-pointer">
+					</Link>
+					<Link href="" className="cursor-pointer">
 						<Image src={instagram} width={40} height={40} alt="instagram" />
-					</div>
-					<div className="cursor-pointer">
+					</Link>
+					<Link href="" className="cursor-pointer">
 						<Image src={linkedIn} width={40} height={40} alt="linkedIn" />
-					</div>
+					</Link>
 				</div>
 
 				{/* FAMILY LOGOS */}
@@ -153,7 +154,7 @@ const Footer = () => {
 				<div className="flex flex-col items-start w-full lg:w-auto lg:gap-5 lg:items-center lg:flex-row">
 					<div className="flex items-center font-medium lg:text-lg text-white leading-[150%] gap-2 border-solid lg:border border-[#2C5446] p-3 rounded-lg">
 						<Mail fill="#CBEA7B" color="#234338" size={36} />
-						<p>sa7-sa7@saudia.com</p>
+						<p>a.ghandour@outboxsa.com</p>
 					</div>
 					<div className="flex items-center font-medium lg:text-lg text-white leading-[150%] gap-2 border-solid lg:border border-[#2C5446] p-3 rounded-lg">
 						<Phone fill="#CBEA7B" color="#234338" size={36} />
@@ -161,7 +162,7 @@ const Footer = () => {
 					</div>
 					<div className="flex items-center font-medium lg:text-lg text-white leading-[150%] gap-2 border-solid lg:border border-[#2C5446] p-3 rounded-lg">
 						<MapPin fill="#CBEA7B" color="#234338" size={36} />
-						<p>Somewhere in the World</p>
+						<p>Saudi Arabia - المملكة السعودية</p>
 					</div>
 				</div>
 

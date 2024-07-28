@@ -1,9 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import nutritionImg from '../../../public/about-nutrition.png';
 
 const NurtritionSection = ({ aboutContent, mediaFiles }) => {
+	const router = useRouter();
+
 	return (
 		<div className="container flex flex-col-reverse px-6 md:flex-row -mt-72 mb-36 lg:mb-44 lg:-mt-52 xl:-mt-72 gap-14 md:gap-0 xl:px-32">
 			<div className="flex flex-col justify-center basis-1/2">

@@ -137,7 +137,6 @@ const RegisterForm = ({ registerNowData }) => {
 				}}
 			>
 				{(props) => {
-					console.log(props);
 					return (
 						<>
 							{submitted ? (
@@ -210,7 +209,7 @@ const RegisterForm = ({ registerNowData }) => {
 									</div>
 
 									{/* MANAGERS EMAIL & PHONE NUMBER */}
-									<div className="flex gap-6">
+									<div className="flex flex-col md:flex-row md:gap-6">
 										{/* Managers Email */}
 										<div className="flex flex-col mt-5 basis-1/2">
 											<label
@@ -241,6 +240,22 @@ const RegisterForm = ({ registerNowData }) => {
 												name="phoneNumber"
 												id="phoneNumber"
 												country={'sa'}
+												inputStyle={{
+													width: '100%',
+													backgroundColor: '#f1f1f1',
+													border: '1px solid #f1f1f1',
+													height: '60px',
+													outline: 'none',
+													borderRadius: '10px',
+												}}
+												buttonStyle={
+													{
+														// width: '50px',
+														// paddingLeft: '20px',
+														// paddingRight: '20px',
+													}
+												}
+												onlyCountries={['sa', 'eg', 'ae', 'jo', 'bh']}
 												value={props.values.phoneNumber}
 												onChange={(phone) =>
 													props.setFieldValue('phoneNumber', phone)
@@ -256,7 +271,7 @@ const RegisterForm = ({ registerNowData }) => {
 									</div>
 
 									{/* ORG TYPE */}
-									<div className="flex gap-6">
+									<div className="flex flex-col md:flex-row md:gap-6">
 										<div
 											className={`flex flex-col mt-5 ${
 												props.values.orgType.includes('أخرى')
@@ -326,7 +341,7 @@ const RegisterForm = ({ registerNowData }) => {
 									</div>
 
 									{/* City */}
-									<div className="flex gap-6">
+									<div className="flex flex-col md:flex-row md:gap-6">
 										<div
 											className={`flex flex-col mt-5 ${
 												props.values.city.includes('أخرى')
@@ -408,7 +423,7 @@ const RegisterForm = ({ registerNowData }) => {
 										)}
 									</div>
 
-									<div className="flex gap-6">
+									<div className="flex flex-col md:flex-row md:gap-6">
 										{/* Males Number */}
 										<div className="flex flex-col mt-5 basis-1/2">
 											<label
@@ -453,7 +468,7 @@ const RegisterForm = ({ registerNowData }) => {
 									</div>
 
 									{/* How did you know us? */}
-									<div className="flex gap-6">
+									<div className="flex flex-col md:flex-row md:gap-6">
 										<div
 											className={`flex flex-col mt-5 ${
 												props.values.howDidYouKnow.includes('أخرى')
@@ -545,14 +560,14 @@ const RegisterForm = ({ registerNowData }) => {
 
 									{/* TERMS & CONDITIONS */}
 									<div className="mt-12 border-b border-black border-dashed">
-										<p className="font-semibold mb-5 text-[26px]">
+										<p className="font-semibold mb-5 text-base lg:text-[26px]">
 											{registerNowData.registerPageContent.conditions}
 										</p>
-										<div className="flex items-center">
-											<p className="size-3 me-5 bg-[#4CAF50] rounded-full"></p>
-											<p className="text-xl font-semibold leading-[166%]">
+										<div className="flex items-start lg:items-center">
+											<p className="min-w-3 min-h-3 mt-3 lg:mt-0 me-5 bg-[#4CAF50] rounded-full"></p>
+											<p className="lg:text-xl font-semibold leading-[166%]">
 												{registerNowData.registerPageContent.condition1}{' '}
-												<span className="text-[#227C25] text-2xl">
+												<span className="text-[#227C25] lg:text-2xl block lg:inline">
 													{
 														registerNowData.registerPageContent
 															.condition1Highlight
@@ -561,11 +576,11 @@ const RegisterForm = ({ registerNowData }) => {
 											</p>
 										</div>
 
-										<div className="flex items-center">
-											<p className="size-3 me-5 bg-[#4CAF50] rounded-full"></p>
-											<p className="text-xl font-semibold leading-[166%]">
+										<div className="flex items-start lg:items-center">
+											<p className="min-w-3 min-h-3 mt-3 lg:mt-0 me-5 bg-[#4CAF50] rounded-full"></p>
+											<p className="lg:text-xl font-semibold leading-[166%]">
 												{registerNowData.registerPageContent.condition2}{' '}
-												<span className="text-[#227C25] text-2xl">
+												<span className="text-[#227C25] lg:text-2xl block lg:inline">
 													{
 														registerNowData.registerPageContent
 															.condition2Highlight
@@ -574,13 +589,13 @@ const RegisterForm = ({ registerNowData }) => {
 											</p>
 										</div>
 
-										<div className="flex items-center">
-											<p className="size-3 me-5 bg-[#4CAF50] rounded-full"></p>
-											<p className="text-xl font-semibold leading-[166%]">
+										<div className="flex items-start lg:items-center">
+											<p className="min-w-3 min-h-3 mt-3 lg:mt-0 me-5 bg-[#4CAF50] rounded-full"></p>
+											<p className="lg:text-xl font-semibold leading-[166%]">
 												{registerNowData.registerPageContent.condition3}
 											</p>
 										</div>
-										<div className="lg:mb-12 ms-8">
+										<div className="mb-12 ms-8">
 											<p
 												onClick={() => setAgree(!agree)}
 												className={`py-4 mt-5 text-lg font-semibold text-center transition duration-500 border-b border-black border-solid cursor-pointer w-28 lg:w-44 ${

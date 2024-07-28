@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function Box({ isMobile }) {
-	console.log({ isMobile });
 	const { nodes, materials } = useGLTF('/care-box.glb');
 	return (
 		<group dispose={null}>

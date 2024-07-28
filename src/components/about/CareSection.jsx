@@ -1,9 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import careImg from '../../../public/about-care.png';
 
 const CareSection = ({ aboutContent, mediaFiles }) => {
+	const router = useRouter();
 	return (
 		<div className="container flex flex-col-reverse px-6 md:flex-row-reverse mb-36 lg:mb-44 gap-14 md:gap-0 xl:px-32">
 			<div className="flex flex-col justify-center basis-1/2">
@@ -21,7 +23,7 @@ const CareSection = ({ aboutContent, mediaFiles }) => {
 				</p>
 				<button
 					className="w-full py-3 my-12 text-2xl font-semibold text-white transition duration-300 hover:text-black sm:w-2/3 lg:h-16 lg:w-80 rounded-xl bg-blue-primary hover:bg-yellow-primary"
-					onClick={() => router.push('/register-now')}
+					onClick={() => router.push('/sahseh-care')}
 				>
 					{aboutContent.careCta}
 				</button>

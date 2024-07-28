@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import { MoveUpLeft } from 'lucide-react';
-
-import { useContentContext } from '../../context/ContentContext';
 import useBreakpoint from '../../hooks/useBreakpoints';
+
+import { useRouter } from 'next/router';
 
 const AboutSection = ({ homeContent, mediaFiles }) => {
 	const breakpoint = useBreakpoint();
+	const router = useRouter();
 	return (
 		<div className="container my-20 space-y-14">
 			<div>
@@ -20,7 +21,10 @@ const AboutSection = ({ homeContent, mediaFiles }) => {
 
 			<div className="flex flex-col gap-6 sm:flex-row">
 				{/* SAHSEH NUTRITION */}
-				<div className="sm:basis-1/3 group cursor-pointer flex h-40 lg:h-[284px] rounded-xl bg-green-dark hover:bg-green-lighter transition duration-700 px-10 py-5">
+				<div
+					onClick={() => router.push('/sahseh-nutrition')}
+					className="sm:basis-1/3 group cursor-pointer flex h-40 lg:h-[284px] rounded-xl bg-green-dark hover:bg-green-lighter transition duration-700 px-10 py-5"
+				>
 					<div className="flex flex-col justify-between basis-1/2">
 						{mediaFiles?.logo && (
 							<Image
@@ -84,7 +88,10 @@ const AboutSection = ({ homeContent, mediaFiles }) => {
 				</div>
 
 				{/* SAHSEH CARE */}
-				<div className="sm:basis-1/3 group flex h-40 lg:h-[284px] cursor-pointer rounded-xl bg-blue-primary hover:bg-blue-light transition duration-700 px-10 py-5">
+				<div
+					onClick={() => router.push('/sahseh-care')}
+					className="sm:basis-1/3 group flex h-40 lg:h-[284px] cursor-pointer rounded-xl bg-blue-primary hover:bg-blue-light transition duration-700 px-10 py-5"
+				>
 					<div className="flex flex-col justify-between basis-1/2">
 						{mediaFiles?.careLogo && (
 							<Image

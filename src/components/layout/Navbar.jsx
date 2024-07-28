@@ -65,82 +65,86 @@ const Navbar = () => {
 	return (
 		<nav className="absolute w-full py-5 text-xl text-white navbar bg-[#94C2C0]">
 			<div className="lg:px-5 xl:px-0 xl:container">
-				<div className="grid items-start content-center justify-between grid-cols-8 px-5 lg:px-0 lg:flex lg:items-center">
+				<div className="items-start content-center justify-between px-5 md:flex lg:px-0 lg:items-center">
 					{/* MOBILE MENU BUTTON */}
-					<div className="col-span-1 pt-5 rtl:pr-5 ltr:pl-5 lg:hidden">
-						<motion.button
-							initial="hide"
-							animate={isMobileMenuOpen ? 'show' : 'hide'}
-							onClick={toggleMobileMenu}
-							className="relative z-10 flex flex-col space-y-1"
-						>
-							<motion.span
-								variants={{
-									hide: {
-										rotate: 0,
-									},
-									show: {
-										rotate: 45,
-										y: 7.5,
-									},
-								}}
-								className="sticky block w-8 h-1 rounded-lg bg-green-darker"
-							></motion.span>
-							<motion.span
-								variants={{
-									hide: {
-										opacity: 1,
-									},
-									show: {
-										opacity: 0,
-									},
-								}}
-								className="sticky block w-5 h-1 rounded-lg bg-green-darker"
-							></motion.span>
-							<motion.span
-								variants={{
-									hide: {
-										rotate: 0,
-									},
-									show: {
-										rotate: -45,
-										y: -7.5,
-									},
-								}}
-								className="sticky block w-8 h-1 rounded-lg bg-green-darker"
-							></motion.span>
-						</motion.button>
-					</div>
-
-					{/* LOGO */}
-					<div className="flex-shrink-0 col-span-1">
-						<div>
-							{mediaFiles.logo && (
-								<Image
-									src={`http:${mediaFiles?.logo?.url}`}
-									width={
-										breakpoint === 'lg'
-											? 100
-											: breakpoint === 'xl'
-											? 100
-											: breakpoint === '2xl'
-											? 100
-											: 60
-									}
-									height={
-										breakpoint === 'lg'
-											? 100
-											: breakpoint === 'xl'
-											? 100
-											: breakpoint === '2xl'
-											? 100
-											: 60
-									}
-									alt="sahseh logo"
-									className=""
-								/>
-							)}
+					<div className="flex justify-between">
+						<div className="px-5 pt-5 lg:hidden">
+							<motion.button
+								initial="hide"
+								animate={isMobileMenuOpen ? 'show' : 'hide'}
+								onClick={toggleMobileMenu}
+								className="relative z-10 flex flex-col space-y-1"
+							>
+								<motion.span
+									variants={{
+										hide: {
+											rotate: 0,
+										},
+										show: {
+											rotate: 45,
+											y: 7.5,
+										},
+									}}
+									className="sticky block w-8 h-1 rounded-lg bg-green-darker"
+								></motion.span>
+								<motion.span
+									variants={{
+										hide: {
+											opacity: 1,
+										},
+										show: {
+											opacity: 0,
+										},
+									}}
+									className="sticky block w-5 h-1 rounded-lg bg-green-darker"
+								></motion.span>
+								<motion.span
+									variants={{
+										hide: {
+											rotate: 0,
+										},
+										show: {
+											rotate: -45,
+											y: -7.5,
+										},
+									}}
+									className="sticky block w-8 h-1 rounded-lg bg-green-darker"
+								></motion.span>
+							</motion.button>
 						</div>
+
+						{/* LOGO */}
+						<Link href="/">
+							<div className="cursor-pointer ">
+								<div>
+									{mediaFiles.logo && (
+										<Image
+											src={`http:${mediaFiles?.logo?.url}`}
+											width={
+												breakpoint === 'lg'
+													? 100
+													: breakpoint === 'xl'
+													? 100
+													: breakpoint === '2xl'
+													? 100
+													: 60
+											}
+											height={
+												breakpoint === 'lg'
+													? 100
+													: breakpoint === 'xl'
+													? 100
+													: breakpoint === '2xl'
+													? 100
+													: 60
+											}
+											alt="sahseh logo"
+											className=""
+										/>
+									)}
+								</div>
+							</div>
+						</Link>
 					</div>
 
 					{/* DESKTOP NAVBAR ITEMS */}
@@ -159,9 +163,9 @@ const Navbar = () => {
 					</div>
 
 					{/* CTA */}
-					<div className="flex items-center justify-between col-span-6 justify-self-end">
+					<div className="items-center justify-between hidden md:flex justify-self-end">
 						{/* CALL TO ACTION BUTTON */}
-						<div className="md:mx-5 md:inline-block">
+						<div className="hidden md:mx-5 sm:inline-block">
 							<button
 								onClick={() => router.push('/register-now')}
 								className="px-8 py-5 text-sm font-semibold text-black capitalize transition duration-300 lg:text-base hover:bg-white bg-yellow-primary rounded-xl"
@@ -226,11 +230,11 @@ const Navbar = () => {
 											opacity: 1,
 										},
 									}}
-									className="space-y-6 list-none"
+									className="list-none divide-y-2 divide-gray-200"
 								>
 									{navItems &&
 										Object.values(navItems).map((item, i) => (
-											<li key={i}>
+											<li key={i} className="py-6 ">
 												<Link
 													onClick={() => setIsMobileMenuOpen(false)}
 													href={navLinks[Object.keys(navItems)[i]]}
@@ -240,6 +244,9 @@ const Navbar = () => {
 												</Link>
 											</li>
 										))}
+									<li className="py-6">
+										<LanguageSwitcher className="text-black" />
+									</li>
 								</motion.ul>
 								<motion.div
 									variants={{
@@ -254,6 +261,12 @@ const Navbar = () => {
 									}}
 									className="w-full h-1 bg-white/30"
 								></motion.div>
+								<button
+									onClick={() => router.push('/register-now')}
+									className="px-8 py-5 text-sm font-semibold text-black capitalize transition duration-300 lg:text-base hover:bg-white bg-yellow-primary rounded-xl"
+								>
+									{CTA}
+								</button>
 								<motion.ul
 									variants={{
 										hide: {
@@ -267,14 +280,35 @@ const Navbar = () => {
 									}}
 									className="flex justify-center list-none gap-x-4"
 								>
-									<li className="flex items-center justify-center p-3 bg-gray-600 rounded-lg">
-										<div className="">FB</div>
+									<li className="flex items-center justify-center p-0 rounded-lg">
+										{mediaFiles.logo && (
+											<Image
+												src={`http:${mediaFiles?.logo?.url}`}
+												width={60}
+												height={60}
+												alt="sahseh logo"
+											/>
+										)}
 									</li>
-									<li className="flex items-center justify-center p-3 bg-gray-600 rounded-lg">
-										<div className="">FB</div>
+									<li className="flex items-center justify-center p-0 rounded-lg">
+										{mediaFiles.careLogo && (
+											<Image
+												src={`http:${mediaFiles?.careLogo?.url}`}
+												width={60}
+												height={60}
+												alt="sahseh logo"
+											/>
+										)}
 									</li>
-									<li className="flex items-center justify-center p-3 bg-gray-600 rounded-lg">
-										<div className="">FB</div>
+									<li className="flex items-center justify-center p-0 rounded-lg">
+										{mediaFiles.couponLogo && (
+											<Image
+												src={`http:${mediaFiles?.couponLogo?.url}`}
+												width={60}
+												height={60}
+												alt="sahseh couponLogo"
+											/>
+										)}
 									</li>
 								</motion.ul>
 							</motion.div>

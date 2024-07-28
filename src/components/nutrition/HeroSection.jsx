@@ -8,7 +8,6 @@ import heroImgTablet from '../../../public/nutrition-bg-tablet.svg';
 import BoxCanvas from '../nutrition-3d-models/BoxCanvas';
 
 const HeroSection = ({ mediaFiles, nutritionContent }) => {
-	console.log({ nutritionContent });
 	return (
 		<div className="pt-24 lg:pt-[140px] min-h-[70vh] sm:min-h-[100vh] lg:min-h-[125vh] relative">
 			<Image

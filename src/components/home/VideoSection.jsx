@@ -7,7 +7,6 @@ import 'video-react/dist/video-react.css';
 const VideoSection = () => {
 	const { mediaFiles } = useContentContext();
 
-	console.log({ mediaFiles });
 	return (
 		<div className="relative mt-32">
 			<style>{`

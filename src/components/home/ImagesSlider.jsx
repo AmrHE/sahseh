@@ -58,7 +58,7 @@ function MultipleItems() {
 	};
 
 	return (
-		<div className="mt-20 mb-8">
+		<div className="mx-10 mt-20 mb-8">
 			<Slider ref={sliderRef} {...settings}>
 				{mediaFiles?.sliderImages &&
 					mediaFiles?.sliderImages.map((item, i) => (

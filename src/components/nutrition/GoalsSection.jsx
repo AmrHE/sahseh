@@ -24,51 +24,139 @@ const GoalsSection = ({ nutritionContent, mediaFiles }) => {
 					{nutritionContent.goalsTitle}
 				</p>
 				<div className="grid grid-cols-1 lg:grid-cols-2">
-					<div className="flex items-start col-span-1 mt-6 lg:items-center">
-						<Image src={checkmark} alt="checkmark" />
-						<p className="px-2 text-base lg:text-2xl leading-[205%]">
+					<div className="flex items-start col-span-1 mt-6 lg:items-start">
+						<Image
+							src={checkmark}
+							className="inline lg:hidden"
+							width={33}
+							height={26}
+							alt="checkmark"
+						/>
+						<Image
+							src={checkmark}
+							alt="checkmark"
+							className="hidden lg:inline"
+						/>
+						<p className="px-2 text-base lg:text-2xl lg:leading-[205%]">
 							{nutritionContent.goal1}
 						</p>
 					</div>
-					<div className="flex items-start col-span-1 mt-6 lg:items-center">
-						<Image src={checkmark} alt="checkmark" />
-						<p className="px-2 text-base lg:text-2xl leading-[205%]">
+					<div className="flex items-start col-span-1 mt-6 lg:items-start">
+						<Image
+							src={checkmark}
+							className="inline lg:hidden"
+							width={33}
+							height={26}
+							alt="checkmark"
+						/>
+						<Image
+							src={checkmark}
+							alt="checkmark"
+							className="hidden lg:inline"
+						/>
+						<p className="px-2 text-base lg:text-2xl lg:leading-[205%]">
 							{nutritionContent.goal2}
 						</p>
 					</div>
-					<div className="flex items-start col-span-1 mt-6 lg:items-center">
-						<Image src={checkmark} alt="checkmark" />
-						<p className="px-2 text-base lg:text-2xl leading-[205%]">
+					<div className="flex items-start col-span-1 mt-6 lg:items-start">
+						<Image
+							src={checkmark}
+							className="inline lg:hidden"
+							width={33}
+							height={26}
+							alt="checkmark"
+						/>
+						<Image
+							src={checkmark}
+							alt="checkmark"
+							className="hidden lg:inline"
+						/>
+						<p className="px-2 text-base lg:text-2xl lg:leading-[205%]">
 							{nutritionContent.goal3}
 						</p>
 					</div>
-					<div className="flex items-start col-span-1 mt-6 lg:items-center">
-						<Image src={checkmark} alt="checkmark" />
-						<p className="px-2 text-base lg:text-2xl leading-[205%]">
+					<div className="flex items-start col-span-1 mt-6 lg:items-start">
+						<Image
+							src={checkmark}
+							className="inline lg:hidden"
+							width={33}
+							height={26}
+							alt="checkmark"
+						/>
+						<Image
+							src={checkmark}
+							alt="checkmark"
+							className="hidden lg:inline"
+						/>
+						<p className="px-2 text-base lg:text-2xl lg:leading-[205%]">
 							{nutritionContent.goal4}
 						</p>
 					</div>
-					<div className="flex items-start col-span-1 mt-6 lg:items-center">
-						<Image src={checkmark} alt="checkmark" />
-						<p className="px-2 text-base lg:text-2xl leading-[205%]">
+					<div className="flex items-start col-span-1 mt-6 lg:items-start">
+						<Image
+							src={checkmark}
+							className="inline lg:hidden"
+							width={33}
+							height={26}
+							alt="checkmark"
+						/>
+						<Image
+							src={checkmark}
+							alt="checkmark"
+							className="hidden lg:inline"
+						/>
+						<p className="px-2 text-base lg:text-2xl lg:leading-[205%]">
 							{nutritionContent.goal5}
 						</p>
 					</div>
-					<div className="flex items-start col-span-1 mt-6 lg:items-center">
-						<Image src={checkmark} alt="checkmark" />
-						<p className="px-2 text-base lg:text-2xl leading-[205%]">
+					<div className="flex items-start col-span-1 mt-6 lg:items-start">
+						<Image
+							src={checkmark}
+							className="inline lg:hidden"
+							width={33}
+							height={26}
+							alt="checkmark"
+						/>
+						<Image
+							src={checkmark}
+							alt="checkmark"
+							className="hidden lg:inline"
+						/>
+						<p className="px-2 text-base lg:text-2xl lg:leading-[205%]">
 							{nutritionContent.goal6}
 						</p>
 					</div>
-					<div className="flex items-start col-span-1 mt-6 lg:items-center">
-						<Image src={checkmark} alt="checkmark" />
-						<p className="px-2 text-base lg:text-2xl leading-[205%]">
+					<div className="flex items-start col-span-1 mt-6 lg:items-start">
+						<Image
+							src={checkmark}
+							className="inline lg:hidden"
+							width={33}
+							height={26}
+							alt="checkmark"
+						/>
+						<Image
+							src={checkmark}
+							alt="checkmark"
+							className="hidden lg:inline"
+						/>
+						<p className="px-2 text-base lg:text-2xl lg:leading-[205%]">
 							{nutritionContent.goal7}
 						</p>
 					</div>
-					<div className="flex items-start col-span-1 mt-6 lg:items-center">
-						<Image src={checkmark} alt="checkmark" />
-						<p className="px-2 text-base lg:text-2xl leading-[205%]">
+					<div className="flex items-start col-span-1 mt-6 lg:items-start">
+						<Image
+							src={checkmark}
+							className="inline lg:hidden"
+							width={33}
+							height={26}
+							alt="checkmark"
+						/>
+						<Image
+							src={checkmark}
+							alt="checkmark"
+							className="hidden lg:inline"
+						/>
+						<p className="px-2 text-base lg:text-2xl lg:leading-[205%]">
 							{nutritionContent.goal8}
 						</p>
 					</div>

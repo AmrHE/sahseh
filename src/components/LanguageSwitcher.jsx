@@ -3,11 +3,11 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ className }) => {
 	const { locales, asPath, locale } = useRouter();
 
 	return (
-		<div>
+		<div className={`${className} uppercase`}>
 			{locales
 				.filter((loc) => loc !== locale)
 				.map((locale) => (
