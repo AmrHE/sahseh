@@ -66,18 +66,18 @@ const Footer = () => {
 						<Link href="/home">
 							<p className="cursor-pointer">{footer?.home}</p>
 						</Link>
-						<Link href="/about">
+						<Link href="/about-us">
 							<p className="cursor-pointer">{footer?.about}</p>
 						</Link>
-						<Link href="/nutrition">
+						<Link href="/sahseh-nutrition">
 							<p className="cursor-pointer">{footer?.nutrition}</p>
 						</Link>
-						<Link href="/care">
+						<Link href="/sahseh-care">
 							<p className="cursor-pointer">{footer?.care}</p>
 						</Link>
-						<Link href="/coupon">
+						{/* <Link href="/coupon">
 							<p className="cursor-wait">{footer?.coupon}</p>
-						</Link>
+						</Link> */}
 						<Link href="/register-now">
 							<p className="cursor-pointer">{footer?.register}</p>
 						</Link>

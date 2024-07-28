@@ -148,6 +148,7 @@ const Navbar = () => {
 						{navItems &&
 							Object.values(navItems).map((item, i) => (
 								<Link
+									onClick={() => setIsMobileMenuOpen(false)}
 									href={navLinks[Object.keys(navItems)[i]]}
 									key={i}
 									className="capitalize md:mx-4"
@@ -230,12 +231,13 @@ const Navbar = () => {
 									{navItems &&
 										Object.values(navItems).map((item, i) => (
 											<li key={i}>
-												<a
-													href="#"
+												<Link
+													onClick={() => setIsMobileMenuOpen(false)}
+													href={navLinks[Object.keys(navItems)[i]]}
 													className="font-semibold text-black capitalize"
 												>
 													{item}
-												</a>
+												</Link>
 											</li>
 										))}
 								</motion.ul>
