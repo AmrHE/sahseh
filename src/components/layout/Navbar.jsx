@@ -63,7 +63,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="absolute w-full py-5 text-xl text-white navbar bg-[#94C2C0]">
+		<nav className="w-full py-5 text-xl text-white navbar bg-navbar-gradient ">
 			<div className="lg:px-5 xl:px-0 xl:container">
 				<div className="items-start content-center justify-between px-5 md:flex lg:px-0 lg:items-center">
 					{/* MOBILE MENU BUTTON */}

@@ -30,7 +30,7 @@ const RegisterNow = ({ registerNowData }) => {
 	return (
 		<div className="sm:bg-[#95C4C2] lg:bg-transparent mb-32">
 			<div className="bg-register-gradient">
-				<div className="container pt-24 xl:px-52 lg:pt-40">
+				<div className="container pt-24 xl:px-52">
 					<h1 className="text-2xl lg:text-[46px] mt-12 mb-10 text-center font-bold">
 						{registerNowData.registerPageContent.header}
 					</h1>

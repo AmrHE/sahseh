@@ -9,7 +9,7 @@ import BoxCanvas from '../nutrition-3d-models/BoxCanvas';
 
 const HeroSection = ({ mediaFiles, nutritionContent }) => {
 	return (
-		<div className="pt-24 lg:pt-[140px] min-h-[70vh] sm:min-h-[100vh] lg:min-h-[125vh] relative">
+		<div className="min-h-[70vh] sm:min-h-[100vh] lg:min-h-[125vh] relative">
 			<Image
 				src={heroImgMob}
 				className="absolute block sm:hidden -z-10 ltr:flip_image"

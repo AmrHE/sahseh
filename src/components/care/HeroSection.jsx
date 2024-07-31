@@ -8,7 +8,7 @@ import BoxCanvas from '../care-3d-models/BoxCanvas';
 
 const HeroSection = ({ sahsehCareContent, mediaFiles }) => {
 	return (
-		<div className="pt-24 lg:pt-[140px] min-h-[70vh] sm:min-h-[100vh] lg:min-h-[125vh] relative">
+		<div className="min-h-[70vh] sm:min-h-[100vh] lg:min-h-[125vh] relative">
 			<Image
 				priority
 				src={heroImgMob}
