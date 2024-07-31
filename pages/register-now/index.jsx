@@ -36,7 +36,6 @@ const RegisterNow = ({ registerNowData }) => {
 					</h1>
 					<div className="p-5 my-5 shadow-2xl rounded-[20px] bg-white mx-5">
 						<Image src={banner} alt="banner" className="rounded-t-[20px]" />
-						{/* <Image src={bannerMob} alt="banner" className="block sm:hidden" /> */}
 						{submitted ? (
 							<div className="text-[16px] md:text-[26px] px-[30px] py-5 bg-[#4CC65025] rounded-b-[20px] text-center">
 								{registerNowData.registerPageContent.subheaderSuccess}

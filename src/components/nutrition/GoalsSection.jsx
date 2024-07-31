@@ -24,7 +24,7 @@ const GoalsSection = ({ nutritionContent, mediaFiles }) => {
 					{nutritionContent.goalsTitle}
 				</p>
 				<div className="grid grid-cols-1 lg:grid-cols-2">
-					<div className="flex items-start col-span-1 mt-6 lg:items-start">
+					<div className="flex items-start col-span-1 mt-6 lg:items-center">
 						<Image
 							src={checkmark}
 							className="inline lg:hidden"

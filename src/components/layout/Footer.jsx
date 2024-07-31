@@ -158,7 +158,7 @@ const Footer = () => {
 					</div>
 					<div className="flex items-center font-medium lg:text-lg text-white leading-[150%] gap-2 border-solid lg:border border-[#2C5446] p-3 rounded-lg">
 						<Phone fill="#CBEA7B" color="#234338" size={36} />
-						<p>+91 91813 23 2309</p>
+						<p>+966509380330</p>
 					</div>
 					<div className="flex items-center font-medium lg:text-lg text-white leading-[150%] gap-2 border-solid lg:border border-[#2C5446] p-3 rounded-lg">
 						<MapPin fill="#CBEA7B" color="#234338" size={36} />
