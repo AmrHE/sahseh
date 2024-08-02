@@ -63,7 +63,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="w-full py-5 text-xl text-white navbar bg-navbar-gradient ">
+		<nav className="w-full max-h-[120px] py-5 text-xl text-white navbar bg-navbar-gradient ">
 			<div className="lg:px-5 xl:px-0 xl:container">
 				<div className="items-start content-center justify-between px-5 md:flex lg:px-0 lg:items-center">
 					{/* MOBILE MENU BUTTON */}
@@ -122,20 +122,20 @@ const Navbar = () => {
 											src={`http:${mediaFiles?.logo?.url}`}
 											width={
 												breakpoint === 'lg'
-													? 100
+													? 85
 													: breakpoint === 'xl'
-													? 100
+													? 85
 													: breakpoint === '2xl'
-													? 100
+													? 85
 													: 60
 											}
 											height={
 												breakpoint === 'lg'
-													? 100
+													? 85
 													: breakpoint === 'xl'
-													? 100
+													? 85
 													: breakpoint === '2xl'
-													? 100
+													? 85
 													: 60
 											}
 											alt="sahseh logo"
@@ -146,7 +146,6 @@ const Navbar = () => {
 							</div>
 						</Link>
 					</div>
-
 					{/* DESKTOP NAVBAR ITEMS */}
 					<div className="hidden lg:flex md:items-center">
 						{navItems &&
@@ -155,13 +154,12 @@ const Navbar = () => {
 									onClick={() => setIsMobileMenuOpen(false)}
 									href={navLinks[Object.keys(navItems)[i]]}
 									key={i}
-									className="capitalize md:mx-4"
+									className="font-semibold capitalize md:mx-4"
 								>
 									{item}
 								</Link>
 							))}
 					</div>
-
 					{/* CTA */}
 					<div className="items-center justify-between hidden md:flex justify-self-end">
 						{/* CALL TO ACTION BUTTON */}

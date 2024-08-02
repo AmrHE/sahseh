@@ -11,6 +11,10 @@ const arabswell = localFont({
 	src: '../public/arfonts-arabswell-1.ttf',
 	variable: '--font-arabswell',
 });
+const mataryah = localFont({
+	src: '../public/DGMataryah-Regular.ttf',
+	variable: '--font-mataryah',
+});
 
 function MyApp({ Component, pageProps }) {
 	const { locale } = useRouter();
@@ -25,7 +29,7 @@ function MyApp({ Component, pageProps }) {
 
 	return (
 		<ContentContextProvider>
-			<main className={`${arabswell.variable}`}>
+			<main className={`${arabswell.variable} ${mataryah.variable}`}>
 				<Layout>
 					<Component {...pageProps} />
 				</Layout>

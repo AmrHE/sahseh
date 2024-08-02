@@ -12,7 +12,7 @@ const Partners = ({ mediaFiles, nutritionContent }) => {
 					<p className="rtl:lg:w-[336px] ltr:lg:w-[450px] w-[290px] text-center text-[#026C34] text-[22px] lg:text-[40px] leading-[194%] font-bold mt-8">
 						{nutritionContent.partnersTitle}
 					</p>
-					<p className="text-[#090A37] rtl:lg:w-[336px] ltr:lg:w-[450px] w-[290px] text-center text-xl leading-[166%] font-arabswell">
+					<p className="text-[#090A37] rtl:lg:w-[336px] ltr:lg:w-[450px] w-[290px] text-center text-xl leading-[166%] font-mataryah">
 						{nutritionContent.partnersText}
 					</p>
 				</div>

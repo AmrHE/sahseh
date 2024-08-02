@@ -23,7 +23,7 @@ const AboutSection = ({ homeContent, mediaFiles }) => {
 				{/* SAHSEH NUTRITION */}
 				<div
 					onClick={() => router.push('/sahseh-nutrition')}
-					className="sm:basis-1/3 group cursor-pointer flex h-40 lg:h-[284px] rounded-xl bg-green-dark hover:bg-green-lighter transition duration-700 px-10 py-5"
+					className="sm:basis-1/3 group cursor-pointer flex h-40 lg:h-[284px] rounded-xl bg-green-dark hover:bg-[#02A98C] transition duration-700 px-10 py-5"
 				>
 					<div className="flex flex-col justify-between basis-1/2">
 						{mediaFiles?.logo && (
@@ -90,7 +90,7 @@ const AboutSection = ({ homeContent, mediaFiles }) => {
 				{/* SAHSEH CARE */}
 				<div
 					onClick={() => router.push('/sahseh-care')}
-					className="sm:basis-1/3 group flex h-40 lg:h-[284px] cursor-pointer rounded-xl bg-blue-primary hover:bg-blue-light transition duration-700 px-10 py-5"
+					className="sm:basis-1/3 group flex h-40 lg:h-[284px] cursor-pointer rounded-xl bg-blue-primary hover:bg-[#32B5E6] transition duration-700 px-10 py-5"
 				>
 					<div className="flex flex-col justify-between basis-1/2">
 						{mediaFiles?.careLogo && (
@@ -155,7 +155,7 @@ const AboutSection = ({ homeContent, mediaFiles }) => {
 				</div>
 
 				{/* SAHSEH COUPON */}
-				<div className="sm:basis-1/3 group flex h-40 lg:h-[284px] cursor-pointer rounded-xl bg-orange-primary hover:bg-orange-light transition duration-700 px-10 py-5">
+				<div className="sm:basis-1/3 group flex h-40 lg:h-[284px] cursor-pointer rounded-xl hover:bg-orange-primary bg-[#A23C1D] transition duration-700 px-10 py-5">
 					<div className="flex flex-col justify-between basis-1/2">
 						{mediaFiles?.couponLogo && (
 							<Image

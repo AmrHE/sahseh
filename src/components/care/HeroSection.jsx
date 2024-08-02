@@ -8,7 +8,7 @@ import BoxCanvas from '../care-3d-models/BoxCanvas';
 
 const HeroSection = ({ sahsehCareContent, mediaFiles }) => {
 	return (
-		<div className="min-h-[70vh] sm:min-h-[100vh] lg:min-h-[125vh] relative">
+		<div className="relative">
 			<Image
 				priority
 				src={heroImgMob}
@@ -32,24 +32,16 @@ const HeroSection = ({ sahsehCareContent, mediaFiles }) => {
 				alt="hero"
 			/>
 			<div className="container flex flex-col items-center px-5 lg:flex-row">
-				<div className="h-full basis-1/2 lg:py-28 py-14">
+				<div className="h-full basis-1/2 lg:py-40 py-14">
 					<>
-						<p className="text-white font-arabswell leading-[166%] text-[22px] lg:text-[33px] ">
+						<p className="text-white font-mataryah leading-[166%] text-[22px] lg:text-[33px] ">
 							{sahsehCareContent.heroTitle}
 						</p>
-						<p className="text-white font-arabswell leading-[166%] text-[22px] lg:text-[33px] ">
-							{sahsehCareContent.heroTitle2}
-						</p>
-						<p className="text-white font-arabswell leading-[166%] text-[22px] lg:text-[33px] ">
-							{sahsehCareContent.heroTitle3}
-						</p>
 					</>
-
-					<div className="font-semibold text-base lg:font-bold lg:text-3xl leading-[166%] text-blue-primary mt-10">
+					<div className="font-semibold text-base lg:font-bold lg:text-3xl leading-[166%] text-blue-primary mt-10 lg:mt-28">
 						<p> {sahsehCareContent.heroDescription}</p>
 					</div>
 				</div>
-
 				<div className="basis-1/2">
 					<BoxCanvas />
 				</div>

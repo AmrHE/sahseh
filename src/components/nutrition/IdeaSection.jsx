@@ -11,7 +11,7 @@ import eclipse from '../../../public/nutrition-eclipse.svg';
 
 const IdeaSection = ({ mediaFiles, nutritionContent }) => {
 	return (
-		<div className="space-y-8 lg:-mt-[150px] relative flex flex-col-reverse lg:flex-row ">
+		<div className="relative flex flex-col-reverse space-y-8 lg:mt-32 lg:flex-row ">
 			<Image
 				src={eclipse}
 				alt="eclipse"

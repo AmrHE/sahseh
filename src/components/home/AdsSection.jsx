@@ -7,7 +7,7 @@ import adsBottom from '../../../public/ads-bottom.png';
 
 const AdsSection = ({ homeContent, mediaFiles }) => {
 	return (
-		<div className="my-10">
+		<div className="mb-10">
 			<div className="py-10 bg-yellow-primary">
 				<div className="container flex flex-col items-center justify-center gap-6 text-green-darker">
 					<p className="text-[22px] font-bold lg:text-4xl px-4 lg:px-0">

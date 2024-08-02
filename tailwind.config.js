@@ -15,6 +15,7 @@ module.exports = {
 			fontFamily: {
 				cairo: ['Cairo'],
 				arabswell: ['var(--font-arabswell)'],
+				mataryah: ['var(--font-mataryah)'],
 			},
 			colors: {
 				'blue-light': '#5B61D3',
@@ -45,8 +46,8 @@ module.exports = {
 				'nutrition_partners-gradient':
 					'linear-gradient(90deg, #f5f5f5 0%, #C4E8C5 63%)',
 				'register-gradient': 'linear-gradient(180deg, #95C4C2 0%, #ffffff 31%)',
-				'navbar-gradient': 'linear-gradient(0deg, #65A69386 0%, #307561 100%)',
-				'video-image': "url('/video-image.png')",
+				'navbar-gradient': 'linear-gradient(0deg, #65A69399 0%, #307561 100%)',
+				'video-image': "url('/sahseh_website.webp')",
 			},
 		},
 	},

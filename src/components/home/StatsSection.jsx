@@ -19,7 +19,7 @@ const StatsSection = ({ homeContent, mediaFiles }) => {
 			<div className="flex items-center justify-center basis-1/12">
 				<button
 					onClick={() => router.push('/about-us')}
-					className="w-40 py-4 text-xl font-semibold rounded-lg bg-green-secondary"
+					className="w-40 py-4 text-xl font-semibold transition duration-500 rounded-lg bg-yellow-primary hover:bg-green-secondary"
 				>
 					{homeContent?.statsCta}
 				</button>
