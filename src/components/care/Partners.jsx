@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import careEye from '../../../public/care-eye.svg';
 import bg from '../../../public/care-bottom-bg.svg';
+import bg2 from '../../../public/care-bottom-bg2.webp';
 
 const Partners = ({ sahsehCareContent, mediaFiles }) => {
 	return (
@@ -24,9 +25,9 @@ const Partners = ({ sahsehCareContent, mediaFiles }) => {
 			</div>
 
 			<Image
-				src={bg}
+				src={bg2}
 				alt="bg"
-				className="absolute mt-2 sm:-mt-8 lg:-mt-20 -z-20"
+				className="absolute mt-0 opacity-50 sm:-mt-36 lg:-mt-52 -z-20"
 			/>
 		</div>
 	);

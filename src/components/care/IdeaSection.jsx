@@ -9,7 +9,7 @@ import decorationMob from '../../../public/care-idea-decoration-mob.svg';
 
 const IdeaSection = ({ sahsehCareContent, mediaFiles }) => {
 	return (
-		<div className="relative space-y-8 lg:mt-48 ">
+		<div className="relative space-y-8 lg:mt-48">
 			<h3 className="text-[#284BC9] font-bold text-[22px] lg:text-[40px] leading-04 px-24 lg:px-[20%] xl:px-[14%]">
 				{sahsehCareContent.ideaTitle}
 			</h3>
