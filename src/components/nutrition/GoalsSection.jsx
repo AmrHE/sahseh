@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
-import goals from '../../../public/nutrition-goals.svg';
-import goalsMob from '../../../public/nutrition-goals-mob.svg';
+import goals from '../../../public/nutrition-goals.webp';
+import goalsMob from '../../../public/nutrition-goals-mob.webp';
 import checkmark from '../../../public/nutrition-checkmark.svg';
 import eclipse from '../../../public/nutrition-eclipse.svg';
 
-const GoalsSection = ({ nutritionContent, mediaFiles }) => {
+const GoalsSection = ({ nutritionContent }) => {
 	return (
 		<div className="flex flex-col gap-10 mx-5 mt-24">
 			<div className="relative flex items-center justify-center ">
