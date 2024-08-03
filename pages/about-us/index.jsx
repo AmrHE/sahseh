@@ -6,6 +6,8 @@ import AboutBox from '../../src/components/about/AboutBox';
 import NurtritionSection from '../../src/components/about/NurtritionSection';
 import CareSection from '../../src/components/about/CareSection';
 import CouponSection from '../../src/components/about/CouponSection';
+import bg from '../../public/about-bottom-bg.webp';
+import Image from 'next/image';
 
 const AboutUs = ({ aboutPageData }) => {
 	const { setNavbar, mediaFiles, setMediaFiles, setFooter } =
@@ -22,7 +24,7 @@ const AboutUs = ({ aboutPageData }) => {
 	}, [aboutPageData]);
 
 	return (
-		<div className="mb-24 lg:mb-44">
+		<>
 			<HeroSection />
 			<AboutBox
 				aboutContent={aboutPageData?.aboutPageContent}
@@ -40,7 +42,9 @@ const AboutUs = ({ aboutPageData }) => {
 				aboutContent={aboutPageData?.aboutPageContent}
 				mediaFiles={mediaFiles}
 			/>
-		</div>
+
+			<Image src={bg} alt="bg" className="" />
+		</>
 	);
 };
 
