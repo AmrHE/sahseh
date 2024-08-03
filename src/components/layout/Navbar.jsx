@@ -181,7 +181,7 @@ const Navbar = () => {
 			</div>
 
 			{/* MOBILE MENU */}
-			<div className="container z-[999] mx-auto md:mt-0">
+			<div className="container z-[100] mx-auto md:mt-0">
 				<AnimatePresence>
 					{isMobileMenuOpen && (
 						<MotionConfig
@@ -215,7 +215,7 @@ const Navbar = () => {
 								initial="hide"
 								animate="show"
 								exit="hide"
-								className="fixed inset-0 flex flex-col justify-start p-6 space-y-10 bg-white right-[30%] lg:top-16 md:hidden"
+								className="fixed z-[100] inset-0 flex flex-col justify-start p-6 space-y-10 bg-white right-[30%] lg:top-16 md:hidden"
 							>
 								<motion.ul
 									variants={{
