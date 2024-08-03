@@ -8,7 +8,7 @@ const NurtritionSection = ({ aboutContent, mediaFiles }) => {
 	const router = useRouter();
 
 	return (
-		<div className="container flex flex-col-reverse px-6 md:flex-row -mt-54 mb-36 lg:mb-44 lg:-mt-52 xl:-mt-54 gap-14 md:gap-0 xl:px-32">
+		<div className="container flex flex-col-reverse px-6 md:flex-row -mt-80 mb-36 lg:mb-44 lg:-mt-52 xl:-mt-54 gap-14 md:gap-0 xl:px-32">
 			<div className="flex flex-col justify-center basis-1/2">
 				<p className="text-[#259D19] font-semibold text-[22px] leading-5 lg:text-[26px] border-solid border-b-4 pb-5 mb-7 border-[#259D19]  w-fit rtl:pl-12 ltr:pr-12">
 					{aboutContent.nutritionTitle}
