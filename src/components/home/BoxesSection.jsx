@@ -1,10 +1,7 @@
 'use client';
 import React from 'react';
-// import { useContentContext } from '../../context/ContentContext';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-
-import boxex from '../../../public/home_boxes.webp';
 
 const BoxesSection = ({ mediaFiles, homeContent }) => {
 	const router = useRouter();

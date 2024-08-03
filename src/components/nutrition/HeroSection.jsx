@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-import heroImg from '../../../public/nutrition-bg.svg';
-import heroImgMob from '../../../public/nutrition-bg-mob.svg';
-import heroImgTablet from '../../../public/nutrition-bg-tablet.svg';
+import heroImg from '../../../public/nutrition-bg.webp';
+import heroImgMob from '../../../public/nutrition-bg-mob.webp';
+import heroImgTablet from '../../../public/nutrition-bg-tablet.webp';
 
 import BoxCanvas from '../nutrition-3d-models/BoxCanvas';
 

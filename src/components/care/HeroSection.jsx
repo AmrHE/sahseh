@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-import heroImg from '../../../public/care-bg.svg';
-import heroImgMob from '../../../public/care-bg-mob.svg';
-import heroImgTablet from '../../../public/care-bg-tablet.svg';
+import heroImg from '../../../public/care-bg.webp';
+import heroImgMob from '../../../public/care-bg-mobile.webp';
+import heroImgTablet from '../../../public/care-bg-tablet.webp';
 import BoxCanvas from '../care-3d-models/BoxCanvas';
 
 const HeroSection = ({ sahsehCareContent, mediaFiles }) => {

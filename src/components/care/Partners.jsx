@@ -1,10 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import careEye from '../../../public/care-eye.svg';
-import bg from '../../../public/care-bottom-bg.svg';
-import bg2 from '../../../public/care-bottom-bg2.webp';
+import bg from '../../../public/care-bottom-bg.webp';
 
-const Partners = ({ sahsehCareContent, mediaFiles }) => {
+const Partners = ({ sahsehCareContent }) => {
 	return (
 		<div className="relative mt-24 lg:mt-48 rounded-[20px]">
 			<div className="container z-50 bg-care_partners-gradient2 rounded-[20px]">
@@ -25,7 +24,7 @@ const Partners = ({ sahsehCareContent, mediaFiles }) => {
 			</div>
 
 			<Image
-				src={bg2}
+				src={bg}
 				alt="bg"
 				className="absolute mt-0 opacity-50 sm:-mt-36 lg:-mt-52 -z-20"
 			/>
