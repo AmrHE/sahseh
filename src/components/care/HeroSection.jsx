@@ -34,7 +34,7 @@ const HeroSection = ({ sahsehCareContent, mediaFiles }) => {
 			<div className="container flex flex-col items-center px-5 lg:flex-row">
 				<div className="h-full basis-1/2 lg:py-40 py-14">
 					<>
-						<p className="text-white font-mataryah leading-[166%] text-[22px] lg:text-[33px] ">
+						<p className="text-white leading-[166%] text-[16px] lg:text-[22px] font-bold">
 							{sahsehCareContent.heroTitle}
 						</p>
 					</>

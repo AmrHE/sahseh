@@ -34,10 +34,10 @@ const HeroSection = ({ mediaFiles, nutritionContent }) => {
 			/>
 			<div className="container flex flex-col items-center px-5 lg:flex-row">
 				<div className="h-full basis-1/2 lg:py-40 py-14">
-					<p className="text-white font-mataryah text-[22px] lg:text-[33px] ">
+					<p className="text-white text-[16px] lg:text-[22px] font-bold">
 						{nutritionContent?.heroTitle}
 					</p>
-					<div className="font-semibold text-base lg:font-bold lg:text-3xl leading-[166%] text-white mt-10 lg:mt-28">
+					<div className="font-semibold text-base text-green-primary lg:font-bold lg:text-3xl leading-[166%] mt-10 lg:mt-28">
 						<p>{nutritionContent?.heroDescription}</p>
 					</div>
 				</div>

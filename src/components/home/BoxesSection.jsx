@@ -7,7 +7,7 @@ const BoxesSection = ({ mediaFiles, homeContent }) => {
 	const router = useRouter();
 
 	return (
-		<div className="flex flex-col-reverse lg:flex-row mt-20 lg:-mt-[340px] xl:rtl:mr-[10%] xl:ltr:ml-[10%]">
+		<div className="flex flex-col-reverse lg:flex-row mt-20 xl:rtl:mr-[10%] xl:ltr:ml-[10%]">
 			<div className="flex flex-col items-center gap-2 py-10 lg:gap-5 lg:items-start basis-1/3">
 				<p>
 					<span className="text-xl md:text-3xl lg:text-[40px] font-semibold leading-[185%] text-green-darker">

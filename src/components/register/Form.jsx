@@ -1,4 +1,4 @@
-// 'use client';
+'use client';
 import React, { useEffect, useState } from 'react';
 import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
@@ -7,6 +7,8 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import success from '../../../public/SUCCESS.svg';
 import Image from 'next/image';
+import emailjs from '@emailjs/browser';
+
 const client = createClient({
 	accessToken: 'CFPAT-c6kkjOIVXHoD_I1L3_hPXgl4SZnpM6AAjka5hhJ5MD4',
 });
@@ -100,6 +102,44 @@ const RegisterForm = ({ registerNowData }) => {
 								},
 							},
 						})
+					);
+
+				emailjs
+					.send(
+						'service_0g1yolm',
+						'template_fhnjvvn',
+						{
+							from_name: values.managerName,
+							to_name: 'Sah Seh',
+							from_email: values.managerEmail,
+							to_email: 'asda8888f@gmail.com',
+							message: `
+								Organization Name: ${values.orgName}, 
+								Organization Type: ${
+									values.otherOrg
+										? values.orgType + ': ' + values.otherOrg
+										: values.orgType
+								}, 
+								Mangager name: ${values.managerName}, 
+								Mangager email: ${values.managerEmail}, 
+								Manager Title: ${values.jobTitle}, 
+								phone: ${values.phoneNumber}, 
+								city: ${values.city}, 
+								Number of males: ${values.numEmployees}, 
+								Number of females: ${values.numWomenEmployees}, 
+								How did you know us: ${values.howDidYouKnow}, 
+							`,
+						},
+						'6kJDS350_qD1SYmGb'
+					)
+					.then(
+						() => {
+							setSubmitted(true);
+							localStorage.setItem('isSubmitted', true);
+						},
+						(err) => {
+							return;
+						}
 					);
 				setSubmitted(true);
 				localStorage.setItem('isSubmitted', true);

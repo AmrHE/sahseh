@@ -22,7 +22,7 @@ const Hero = ({ homeContent, mediaFiles }) => {
 	}, []);
 
 	return (
-		<div className="min-h-[70vh] sm:min-h-[100vh] lg:min-h-[125vh] lg:pt-52 pt-24 bg-hero-gradient">
+		<div className="min-h-[70vh] sm:min-h-[100vh] lg:pt-52 pt-24 bg-hero-gradient">
 			<div className="rounded-xl">
 				{mediaFiles.ad && (
 					<div className="container relative px-5 md:px-10 lg:px-0">
