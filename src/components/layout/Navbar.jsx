@@ -66,8 +66,9 @@ const Navbar = () => {
 		<nav className="w-full max-h-[120px] py-5 text-xl text-white navbar bg-navbar-gradient ">
 			<div className="lg:px-5 xl:px-0 xl:container">
 				<div className="items-start content-center justify-between px-5 md:flex lg:px-0 lg:items-center">
-					{/* MOBILE MENU BUTTON */}
-					<div className="flex justify-between">
+					{/* MOBILE MENU BTN && LOGO */}
+					<div className="flex justify-between xl:w-[320px]">
+						{/* MOBILE MENU BUTTON */}
 						<div className="px-5 pt-5 lg:hidden">
 							<motion.button
 								initial="hide"
@@ -160,8 +161,8 @@ const Navbar = () => {
 								</Link>
 							))}
 					</div>
-					{/* CTA */}
-					<div className="items-center justify-between hidden md:flex justify-self-end">
+					{/* CTA && LANGUAGE SWITCHER*/}
+					<div className="items-center justify-between hidden md:flex justify-self-end xl:w-[320px]">
 						{/* CALL TO ACTION BUTTON */}
 						<div className="hidden md:mx-5 sm:inline-block">
 							<button
