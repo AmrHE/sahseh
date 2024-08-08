@@ -27,7 +27,14 @@ export default function Home({ homePageData }) {
 			nutritionIcon: homePageData.nutritionIcon,
 			careIcon: homePageData.careIcon,
 			couponIcon: homePageData.couponIcon,
-			ad: homePageData.ad,
+			ad1: homePageData.ad1,
+			ad2: homePageData.ad2,
+			ad3: homePageData.ad3,
+			ad4: homePageData.ad4,
+			ad1_mob: homePageData.ad1_mob,
+			ad2_mob: homePageData.ad2_mob,
+			ad3_mob: homePageData.ad3_mob,
+			ad4_mob: homePageData.ad4_mob,
 			sliderImages: homePageData.sliderImages,
 		});
 	}, [homePageData]);
@@ -80,7 +87,14 @@ export async function getStaticProps({ locale }) {
 	const careVideo = await client.getAsset('4D1giDsFo8wfsJWzsZGBZ4');
 	const couponLogo = await client.getAsset('tiYfuNDOSWFFfSZRIvL7I');
 	const careLogo = await client.getAsset('4acavYIbVXnmQ2NGhWRFja');
-	const ad = await client.getAsset('1qKY2fYfXH3IK3BMLAx7Qq');
+	const ad1 = await client.getAsset('1qKY2fYfXH3IK3BMLAx7Qq');
+	const ad2 = await client.getAsset('5cVwEh9PhRWVGDW7EzJz0W');
+	const ad3 = await client.getAsset('5TrNkK6zRYRBGJvXPgVVs0');
+	const ad4 = await client.getAsset('6HehTVj0filPMoc5cycKl2');
+	const ad1_mob = await client.getAsset('1n64b6MU1za3uOwZb5OhP2');
+	const ad2_mob = await client.getAsset('1bRrDPjheJpVm7kz2xe3dA');
+	const ad3_mob = await client.getAsset('69ImDfWXSZYnE94XrLyKaW');
+	const ad4_mob = await client.getAsset('5dvXFsLnQxggmXHC8spOuc');
 	const homeBoxes = await client.getAsset('2ftDgx0VmeTBYtv6o49ex');
 	const couponIcon = await client.getAsset('1HY8xdoQhqokWK5LMToDYc');
 	const careIcon = await client.getAsset('6HFfJEb6eWZjOk5ypHFE36');
@@ -104,7 +118,14 @@ export async function getStaticProps({ locale }) {
 				careVideo: careVideo.fields.file,
 				careLogo: careLogo.fields.file,
 				couponLogo: couponLogo.fields.file,
-				ad: ad.fields.file,
+				ad1: ad1.fields.file,
+				ad2: ad2.fields.file,
+				ad3: ad3.fields.file,
+				ad4: ad4.fields.file,
+				ad1_mob: ad1_mob.fields.file,
+				ad2_mob: ad2_mob.fields.file,
+				ad3_mob: ad3_mob.fields.file,
+				ad4_mob: ad4_mob.fields.file,
 				homeBoxes: homeBoxes.fields.file,
 				careIcon: careIcon.fields.file,
 				couponIcon: couponIcon.fields.file,
