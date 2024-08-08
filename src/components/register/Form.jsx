@@ -121,7 +121,7 @@ const RegisterForm = ({ registerNowData }) => {
 										: values.orgType
 								}, 
 								Mangager name: ${values.managerName}, 
-								Mangager email: ${values.managerEmail}, 
+								Mangager email: ${values.officialEmail}, 
 								Manager Title: ${values.jobTitle}, 
 								phone: ${values.phoneNumber}, 
 								city: ${values.city}, 
