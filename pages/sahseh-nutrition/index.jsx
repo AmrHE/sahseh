@@ -7,6 +7,7 @@ import HeroSection from '../../src/components/nutrition/HeroSection';
 import IdeaSection from '../../src/components/nutrition/IdeaSection';
 import GoalsSection from '../../src/components/nutrition/GoalsSection';
 import Partners from '../../src/components/nutrition/Partners';
+import Head from 'next/head';
 
 const Nutrition = ({ sahsehNutritionData }) => {
 	const { setNavbar, mediaFiles, setMediaFiles, setFooter } =
@@ -22,24 +23,40 @@ const Nutrition = ({ sahsehNutritionData }) => {
 	}, [sahsehNutritionData]);
 
 	return (
-		<div className="mb-24 lg:mb-44">
-			<HeroSection
-				mediaFiles={mediaFiles}
-				nutritionContent={sahsehNutritionData.nutritionPageContent}
-			/>
-			<IdeaSection
-				mediaFiles={mediaFiles}
-				nutritionContent={sahsehNutritionData.nutritionPageContent}
-			/>
-			<GoalsSection
-				mediaFiles={mediaFiles}
-				nutritionContent={sahsehNutritionData.nutritionPageContent}
-			/>
-			<Partners
-				mediaFiles={mediaFiles}
-				nutritionContent={sahsehNutritionData.nutritionPageContent}
-			/>
-		</div>
+		<>
+			<Head>
+				<title>{sahsehNutritionData?.nutritionPageContent.seoTitle}</title>
+				<meta
+					name="description"
+					content={sahsehNutritionData?.nutritionPageContent.seoDescription}
+				/>
+				<meta
+					name="keywords"
+					content={
+						sahsehNutritionData?.nutritionPageContent.seoKeywords &&
+						sahsehNutritionData?.nutritionPageContent.seoKeywords
+					}
+				/>
+			</Head>
+			<div className="mb-24 lg:mb-44">
+				<HeroSection
+					mediaFiles={mediaFiles}
+					nutritionContent={sahsehNutritionData.nutritionPageContent}
+				/>
+				<IdeaSection
+					mediaFiles={mediaFiles}
+					nutritionContent={sahsehNutritionData.nutritionPageContent}
+				/>
+				<GoalsSection
+					mediaFiles={mediaFiles}
+					nutritionContent={sahsehNutritionData.nutritionPageContent}
+				/>
+				<Partners
+					mediaFiles={mediaFiles}
+					nutritionContent={sahsehNutritionData.nutritionPageContent}
+				/>
+			</div>
+		</>
 	);
 };
 
@@ -55,7 +72,9 @@ export async function getStaticProps({ locale }) {
 	const nutritionPageContent = await client.getEntry('2dzKefw7fRK9eBU7VN3nib', {
 		locale,
 	});
-	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz');
+	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz', {
+		locale,
+	});
 	return {
 		props: {
 			sahsehNutritionData: {

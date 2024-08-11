@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from './Navbar';
-import Footer2 from './Footer2';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
 	return (
 		<div className="relative rlt:font-cairo ">
 			<Navbar />
 			<>{children}</>
-			<Footer2 />
+			<Footer />
 		</div>
 	);
 };

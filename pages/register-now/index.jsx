@@ -8,6 +8,7 @@ import banner from '../../public/register-banner.svg';
 import bannerMob from '../../public/register-banner-mob.webp';
 
 import 'react-phone-input-2/lib/style.css';
+import Head from 'next/head';
 
 const RegisterNow = ({ registerNowData }) => {
 	const { setNavbar, mediaFiles, setMediaFiles, setFooter } =
@@ -28,28 +29,44 @@ const RegisterNow = ({ registerNowData }) => {
 	}, [registerNowData]);
 
 	return (
-		<div className="sm:bg-[#95C4C2] lg:bg-transparent mb-32">
-			<div className="bg-register-gradient">
-				<div className="container pt-24 xl:px-52">
-					<h1 className="text-2xl lg:text-[46px] mt-12 mb-10 text-center font-bold">
-						{registerNowData.registerPageContent.header}
-					</h1>
-					<div className="p-5 my-5 shadow-2xl rounded-[20px] bg-white mx-5">
-						<Image src={banner} alt="banner" className="rounded-t-[20px]" />
-						{submitted ? (
-							<div className="text-[16px] md:text-[26px] px-[30px] py-5 bg-[#4CC65025] rounded-b-[20px] text-center">
-								{registerNowData.registerPageContent.subheaderSuccess}
-							</div>
-						) : (
-							<div className="text-[16px] md:text-[26px] px-[30px] py-5 bg-[#4CC65025] text-center rounded-b-[20px]">
-								{registerNowData.registerPageContent.subheaderRegister}
-							</div>
-						)}
-						<RegisterForm registerNowData={registerNowData} />
+		<>
+			<Head>
+				<title>{registerNowData?.registerPageContent.seoTitle}</title>
+				<meta
+					name="description"
+					content={registerNowData?.registerPageContent.seoDescription}
+				/>
+				<meta
+					name="keywords"
+					content={
+						registerNowData?.registerPageContent.seoKeywords &&
+						registerNowData?.registerPageContent.seoKeywords
+					}
+				/>
+			</Head>
+			<div className="sm:bg-[#95C4C2] lg:bg-transparent mb-32">
+				<div className="bg-register-gradient">
+					<div className="container pt-24 xl:px-52">
+						<h1 className="text-2xl lg:text-[46px] mt-12 mb-10 text-center font-bold">
+							{registerNowData.registerPageContent.header}
+						</h1>
+						<div className="p-5 my-5 shadow-2xl rounded-[20px] bg-white mx-5">
+							<Image src={banner} alt="banner" className="rounded-t-[20px]" />
+							{submitted ? (
+								<div className="text-[16px] md:text-[26px] px-[30px] py-5 bg-[#4CC65025] rounded-b-[20px] text-center">
+									{registerNowData.registerPageContent.subheaderSuccess}
+								</div>
+							) : (
+								<div className="text-[16px] md:text-[26px] px-[30px] py-5 bg-[#4CC65025] text-center rounded-b-[20px]">
+									{registerNowData.registerPageContent.subheaderRegister}
+								</div>
+							)}
+							<RegisterForm registerNowData={registerNowData} />
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
@@ -77,7 +94,9 @@ export async function getStaticProps({ locale }) {
 	// const registerNow = await client.getEntry('NeVSDOOvG5rZTk3QXvlVZ', {
 	// 	locale,
 	// });
-	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz');
+	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz', {
+		locale,
+	});
 	return {
 		props: {
 			registerNowData: {

@@ -34,7 +34,6 @@ const BoxesSection = ({ mediaFiles, homeContent }) => {
 						width={mediaFiles?.homeBoxes?.details?.image?.width}
 						height={mediaFiles?.homeBoxes?.details?.image?.height}
 						alt="homeBoxes"
-						className="ltr:flip_image"
 					/>
 				)}
 			</div>

@@ -8,6 +8,7 @@ import CareSection from '../../src/components/about/CareSection';
 import CouponSection from '../../src/components/about/CouponSection';
 import bg from '../../public/about-bottom-bg.webp';
 import Image from 'next/image';
+import Head from 'next/head';
 
 const AboutUs = ({ aboutPageData }) => {
 	const { setNavbar, mediaFiles, setMediaFiles, setFooter } =
@@ -25,6 +26,21 @@ const AboutUs = ({ aboutPageData }) => {
 
 	return (
 		<>
+			<Head>
+				<title>{aboutPageData?.aboutPageContent.seoTitle}</title>
+				<meta
+					name="description"
+					content={aboutPageData?.aboutPageContent.seoDescription}
+				/>
+				<meta
+					name="keywords"
+					content={
+						aboutPageData?.aboutPageContent.seoKeywords &&
+						aboutPageData?.aboutPageContent.seoKeywords
+					}
+				/>
+			</Head>
+
 			<HeroSection />
 			<AboutBox
 				aboutContent={aboutPageData?.aboutPageContent}
@@ -61,7 +77,9 @@ export async function getStaticProps({ locale }) {
 		locale,
 	});
 
-	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz');
+	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz', {
+		locale,
+	});
 	return {
 		props: {
 			aboutPageData: {

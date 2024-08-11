@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import Head from 'next/head';
+
 import { client, managementClient } from '../src/libs/contentful';
 import { useContentContext } from '../src/context/ContentContext';
 import Hero from '../src/components/home/HeroSection';
@@ -40,35 +42,51 @@ export default function Home({ homePageData }) {
 	}, [homePageData]);
 
 	return (
-		<div className="mb-24 lg:mb-44">
-			<Hero
-				homeContent={homePageData.homePageContent}
-				mediaFiles={mediaFiles}
-			/>
-			<BoxesSection
-				homeContent={homePageData.homePageContent}
-				mediaFiles={mediaFiles}
-			/>
-			<div className="px-5 lg:px-0">
-				<AboutSection
+		<>
+			<Head>
+				<title>{homePageData.homePageContent.seoTitle}</title>
+				<meta
+					name="description"
+					content={homePageData.homePageContent.seoDescription}
+				/>
+				<meta
+					name="keywords"
+					content={
+						homePageData.homePageContent.seoKeywords &&
+						homePageData.homePageContent.seoKeywords
+					}
+				/>
+			</Head>
+			<div className="mb-24 lg:mb-44">
+				<Hero
 					homeContent={homePageData.homePageContent}
 					mediaFiles={mediaFiles}
 				/>
-			</div>
-			<div>
-				<GallerySection homeContent={homePageData.homePageContent} />
-			</div>
-			<AdsSection
-				homeContent={homePageData.homePageContent}
-				mediaFiles={mediaFiles}
-			/>
-			<div className="px-5 lg:px-0">
-				<StatsSection
+				<BoxesSection
 					homeContent={homePageData.homePageContent}
 					mediaFiles={mediaFiles}
 				/>
+				<div className="px-5 lg:px-0">
+					<AboutSection
+						homeContent={homePageData.homePageContent}
+						mediaFiles={mediaFiles}
+					/>
+				</div>
+				<div>
+					<GallerySection homeContent={homePageData.homePageContent} />
+				</div>
+				<AdsSection
+					homeContent={homePageData.homePageContent}
+					mediaFiles={mediaFiles}
+				/>
+				<div className="px-5 lg:px-0">
+					<StatsSection
+						homeContent={homePageData.homePageContent}
+						mediaFiles={mediaFiles}
+					/>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 
@@ -82,29 +100,64 @@ export async function getStaticProps({ locale }) {
 	const footer = await client.getEntry('7Hmn6qQE2OZ6X4mkzoSfwe', {
 		locale,
 	});
-	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz');
-	const nutritionVideo = await client.getAsset('3156i0jym2nENNa4biwltz');
-	const careVideo = await client.getAsset('4D1giDsFo8wfsJWzsZGBZ4');
-	const couponLogo = await client.getAsset('tiYfuNDOSWFFfSZRIvL7I');
-	const careLogo = await client.getAsset('4acavYIbVXnmQ2NGhWRFja');
-	const ad1 = await client.getAsset('1qKY2fYfXH3IK3BMLAx7Qq');
-	const ad2 = await client.getAsset('5cVwEh9PhRWVGDW7EzJz0W');
-	const ad3 = await client.getAsset('5TrNkK6zRYRBGJvXPgVVs0');
-	const ad4 = await client.getAsset('6HehTVj0filPMoc5cycKl2');
-	const ad1_mob = await client.getAsset('1n64b6MU1za3uOwZb5OhP2');
-	const ad2_mob = await client.getAsset('1bRrDPjheJpVm7kz2xe3dA');
-	const ad3_mob = await client.getAsset('69ImDfWXSZYnE94XrLyKaW');
-	const ad4_mob = await client.getAsset('5dvXFsLnQxggmXHC8spOuc');
-	const homeBoxes = await client.getAsset('2ftDgx0VmeTBYtv6o49ex');
-	const couponIcon = await client.getAsset('1HY8xdoQhqokWK5LMToDYc');
-	const careIcon = await client.getAsset('6HFfJEb6eWZjOk5ypHFE36');
-	const nutritionIcon = await client.getAsset('6M47V7S0yMbujUlWXWX6Ma');
+	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz', {
+		locale,
+	});
+	const nutritionVideo = await client.getAsset('3156i0jym2nENNa4biwltz', {
+		locale,
+	});
+	const careVideo = await client.getAsset('4D1giDsFo8wfsJWzsZGBZ4', {
+		locale,
+	});
+	const couponLogo = await client.getAsset('tiYfuNDOSWFFfSZRIvL7I', {
+		locale,
+	});
+	const careLogo = await client.getAsset('4acavYIbVXnmQ2NGhWRFja', {
+		locale,
+	});
+	const ad1 = await client.getAsset('1qKY2fYfXH3IK3BMLAx7Qq', {
+		locale,
+	});
+	const ad2 = await client.getAsset('5cVwEh9PhRWVGDW7EzJz0W', {
+		locale,
+	});
+	const ad3 = await client.getAsset('5TrNkK6zRYRBGJvXPgVVs0', {
+		locale,
+	});
+	const ad4 = await client.getAsset('6HehTVj0filPMoc5cycKl2', {
+		locale,
+	});
+	const ad1_mob = await client.getAsset('1n64b6MU1za3uOwZb5OhP2', {
+		locale,
+	});
+	const ad2_mob = await client.getAsset('1bRrDPjheJpVm7kz2xe3dA', {
+		locale,
+	});
+	const ad3_mob = await client.getAsset('69ImDfWXSZYnE94XrLyKaW', {
+		locale,
+	});
+	const ad4_mob = await client.getAsset('5dvXFsLnQxggmXHC8spOuc', {
+		locale,
+	});
+	const homeBoxes = await client.getAsset('2ftDgx0VmeTBYtv6o49ex', {
+		locale,
+	});
+	const couponIcon = await client.getAsset('1HY8xdoQhqokWK5LMToDYc', {
+		locale,
+	});
+	const careIcon = await client.getAsset('6HFfJEb6eWZjOk5ypHFE36', {
+		locale,
+	});
+	const nutritionIcon = await client.getAsset('6M47V7S0yMbujUlWXWX6Ma', {
+		locale,
+	});
 	const space = await managementClient.getSpace(
 		process.env.CONTENTFUL_SPACE_ID
 	);
 	const environment = await space.getEnvironment('master');
 	const sliderImages = await environment.getAssets({
 		'metadata.tags.sys.id[in]': 'imagesSlider',
+		locale,
 	});
 
 	return {

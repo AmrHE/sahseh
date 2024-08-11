@@ -23,6 +23,7 @@ const Hero = ({ homeContent, mediaFiles }) => {
 		pauseOnHover: true,
 		pauseOnFocus: true,
 		swipeToSlide: true,
+		// rtl: true,
 	};
 
 	useEffect(() => {
@@ -35,6 +36,8 @@ const Hero = ({ homeContent, mediaFiles }) => {
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
+
+	console.log({ mediaFiles });
 
 	return (
 		<div className="min-h-[70vh] sm:min-h-[100vh] lg:pt-52 pt-24 bg-hero-gradient">
@@ -197,7 +200,7 @@ const Hero = ({ homeContent, mediaFiles }) => {
 
 				{/* SLIDER 4 */}
 				<div className="rounded-xl">
-					{mediaFiles.ad4 && (
+					{mediaFiles.ad3 && (
 						<div className="container relative px-5 md:px-10 lg:px-0">
 							{currentWidth && currentWidth > 1024 ? (
 								<Image

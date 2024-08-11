@@ -7,6 +7,7 @@ import HeroSection from '../../src/components/care/HeroSection';
 import IdeaSection from '../../src/components/care/IdeaSection';
 import GoalsSection from '../../src/components/care/GoalsSection';
 import Partners from '../../src/components/care/Partners';
+import Head from 'next/head';
 
 const Care = ({ sahsehCareData }) => {
 	const { setNavbar, mediaFiles, setMediaFiles, setFooter } =
@@ -22,24 +23,40 @@ const Care = ({ sahsehCareData }) => {
 	}, [sahsehCareData]);
 
 	return (
-		<div className="mb-24 lg:mb-44">
-			<HeroSection
-				sahsehCareContent={sahsehCareData.sahsehCareContent}
-				mediaFiles={mediaFiles}
-			/>
-			<IdeaSection
-				sahsehCareContent={sahsehCareData.sahsehCareContent}
-				mediaFiles={mediaFiles}
-			/>
-			<GoalsSection
-				sahsehCareContent={sahsehCareData.sahsehCareContent}
-				mediaFiles={mediaFiles}
-			/>
-			<Partners
-				sahsehCareContent={sahsehCareData.sahsehCareContent}
-				mediaFiles={mediaFiles}
-			/>
-		</div>
+		<>
+			<Head>
+				<title>{sahsehCareData?.sahsehCareContent.seoTitle}</title>
+				<meta
+					name="description"
+					content={sahsehCareData?.sahsehCareContent.seoDescription}
+				/>
+				<meta
+					name="keywords"
+					content={
+						sahsehCareData?.sahsehCareContent.seoKeywords &&
+						sahsehCareData?.sahsehCareContent.seoKeywords
+					}
+				/>
+			</Head>
+			<div className="mb-24 lg:mb-44">
+				<HeroSection
+					sahsehCareContent={sahsehCareData.sahsehCareContent}
+					mediaFiles={mediaFiles}
+				/>
+				<IdeaSection
+					sahsehCareContent={sahsehCareData.sahsehCareContent}
+					mediaFiles={mediaFiles}
+				/>
+				<GoalsSection
+					sahsehCareContent={sahsehCareData.sahsehCareContent}
+					mediaFiles={mediaFiles}
+				/>
+				<Partners
+					sahsehCareContent={sahsehCareData.sahsehCareContent}
+					mediaFiles={mediaFiles}
+				/>
+			</div>
+		</>
 	);
 };
 
@@ -55,7 +72,9 @@ export async function getStaticProps({ locale }) {
 	const sahsehCareContent = await client.getEntry('NeVSDOOvG5rZTk3QXvlVZ', {
 		locale,
 	});
-	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz');
+	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz', {
+		locale,
+	});
 	return {
 		props: {
 			sahsehCareData: {
