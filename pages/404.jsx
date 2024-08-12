@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 const ErrorPage = ({ errorPageData }) => {
-	const { setNavbar, mediaFiles, setMediaFiles, setHomeContent, setFooter } =
+	const { setNavbar, mediaFiles, setMediaFiles, setFooter } =
 		useContentContext();
 
 	const router = useRouter();
@@ -24,13 +24,13 @@ const ErrorPage = ({ errorPageData }) => {
 	}, [errorPageData]);
 
 	return (
-		<div className="h-[87.5vh] bg-green-lightest">
-			<div className="container flex flex-col items-center justify-center mx-auto">
+		<div className="min-h-[100vh] bg-green-lightest px-5">
+			<div className="container flex flex-col items-center justify-center py-10 mx-auto">
 				<Image src={img} alt="not found" />
-				<p className="text-4xl font-bold mb-[14px]">
+				<p className="text-4xl pt-4 font-bold mb-[14px] text-center">
 					{errorPageData?.errorPageContent.title}
 				</p>
-				<p className="text-[22px]">
+				<p className="text-[22px] text-center">
 					{errorPageData?.errorPageContent.description}
 				</p>
 
