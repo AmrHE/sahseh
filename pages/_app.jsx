@@ -4,17 +4,7 @@ import { useRouter } from 'next/router';
 import '../styles/globals.css';
 import Layout from '../src/components/layout/Layout';
 import { ContentContextProvider } from '../src/context/ContentContext';
-
-import localFont from 'next/font/local';
-
-const arabswell = localFont({
-	src: '../public/arfonts-arabswell-1.ttf',
-	variable: '--font-arabswell',
-});
-const mataryah = localFont({
-	src: '../public/DGMataryah-Regular.ttf',
-	variable: '--font-mataryah',
-});
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
 	const { locale } = useRouter();
@@ -28,13 +18,18 @@ function MyApp({ Component, pageProps }) {
 	}, [locale]);
 
 	return (
-		<ContentContextProvider>
-			<main className={`${arabswell.variable} ${mataryah.variable}`}>
-				<Layout>
-					<Component {...pageProps} />
-				</Layout>
-			</main>
-		</ContentContextProvider>
+		<>
+			<Head>
+				<link rel="icon" href="/logo.webp" />
+			</Head>
+			<ContentContextProvider>
+				<main>
+					<Layout>
+						<Component {...pageProps} />
+					</Layout>
+				</main>
+			</ContentContextProvider>
+		</>
 	);
 }
 
