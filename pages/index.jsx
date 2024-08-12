@@ -21,6 +21,7 @@ export default function Home({ homePageData }) {
 		setMediaFiles({
 			...mediaFiles,
 			logo: homePageData.logo,
+			whiteLogo: homePageData.whiteLogo,
 			nutritionVideo: homePageData.nutritionVideo,
 			careVideo: homePageData.careVideo,
 			homeBoxes: homePageData.homeBoxes,
@@ -103,6 +104,9 @@ export async function getStaticProps({ locale }) {
 	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz', {
 		locale,
 	});
+	const whiteLogo = await client.getAsset('1hk88EcrYjfrohZJuLEie2', {
+		locale,
+	});
 	const nutritionVideo = await client.getAsset('3156i0jym2nENNa4biwltz', {
 		locale,
 	});
@@ -167,6 +171,7 @@ export async function getStaticProps({ locale }) {
 				navbar: navbar.fields,
 				footer: footer.fields,
 				logo: logo.fields.file,
+				whiteLogo: whiteLogo.fields.file,
 				nutritionVideo: nutritionVideo.fields.file,
 				careVideo: careVideo.fields.file,
 				careLogo: careLogo.fields.file,

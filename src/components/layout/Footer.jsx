@@ -26,9 +26,9 @@ const Footer = () => {
 				<div className="flex items-center justify-center lg:justify-start">
 					<Link href="/">
 						<div className="block">
-							{mediaFiles.logo && (
+							{mediaFiles.whiteLogo && (
 								<Image
-									src={`http:${mediaFiles?.logo?.url}`}
+									src={`http:${mediaFiles?.whiteLogo?.url}`}
 									width={100}
 									height={100}
 									alt="sahseh logo"

@@ -37,8 +37,6 @@ const Hero = ({ homeContent, mediaFiles }) => {
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
 
-	console.log({ mediaFiles });
-
 	return (
 		<div className="min-h-[70vh] sm:min-h-[100vh] lg:pt-52 pt-24 bg-hero-gradient">
 			<Slider ref={sliderRef} arrows={false} {...settings}>

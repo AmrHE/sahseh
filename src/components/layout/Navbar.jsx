@@ -118,9 +118,9 @@ const Navbar = () => {
 						<Link href="/">
 							<div className="cursor-pointer ">
 								<div>
-									{mediaFiles.logo && (
+									{mediaFiles.whiteLogo && (
 										<Image
-											src={`http:${mediaFiles?.logo?.url}`}
+											src={`http:${mediaFiles?.whiteLogo?.url}`}
 											width={
 												breakpoint === 'lg'
 													? 85
@@ -139,7 +139,7 @@ const Navbar = () => {
 													? 85
 													: 60
 											}
-											alt="sahseh logo"
+											alt="sahseh whiteLogo"
 											className=""
 										/>
 									)}
