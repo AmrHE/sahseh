@@ -167,7 +167,7 @@ const Navbar = () => {
 						<div className="hidden md:mx-5 sm:inline-block">
 							<button
 								onClick={() => router.push('/register-now')}
-								className="px-8 py-5 text-sm font-semibold text-black capitalize transition duration-300 lg:text-base hover:bg-white bg-yellow-primary rounded-xl"
+								className="px-8 py-5 text-sm font-semibold text-black capitalize transition duration-500 lg:text-base hover:bg-green-secondary bg-yellow-primary rounded-xl"
 							>
 								{CTA}
 							</button>
@@ -262,7 +262,7 @@ const Navbar = () => {
 								></motion.div>
 								<button
 									onClick={() => router.push('/register-now')}
-									className="px-8 py-5 text-sm font-semibold text-black capitalize transition duration-300 lg:text-base hover:bg-white bg-yellow-primary rounded-xl"
+									className="px-8 py-5 text-sm font-semibold text-black capitalize transition duration-300 lg:text-base hover:bg-green-secondary bg-yellow-primary rounded-xl"
 								>
 									{CTA}
 								</button>

@@ -5,7 +5,6 @@ import { useContentContext } from '../../src/context/ContentContext';
 import RegisterForm from '../../src/components/register/Form';
 
 import banner from '../../public/register-banner.svg';
-import bannerMob from '../../public/register-banner-mob.webp';
 
 import 'react-phone-input-2/lib/style.css';
 import Head from 'next/head';
@@ -91,16 +90,12 @@ export async function getStaticProps({ locale }) {
 	const registerPageContent = await client.getEntry('ZpMYjjHzHpOiHToXiZW81', {
 		locale,
 	});
-	// const registerNow = await client.getEntry('NeVSDOOvG5rZTk3QXvlVZ', {
-	// 	locale,
-	// });
 	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz', {
 		locale,
 	});
 	return {
 		props: {
 			registerNowData: {
-				// registerNow: registerNow.fields,
 				registerPageContent: registerPageContent.fields,
 				cities: cities.fields,
 				orgTypes: orgTypes.fields,

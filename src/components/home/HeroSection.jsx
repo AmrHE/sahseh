@@ -83,7 +83,7 @@ const Hero = ({ homeContent, mediaFiles }) => {
 									<p className="text-lg sm:text-2xl lg:text-3xl">
 										{homeContent.heroAdContent}
 									</p>
-									<button className="w-40 h-11 lg:w-[19.5rem] lg:h-[5rem] text-lg font-semibold text-black transition duration-200 bg-yellow-primary hover:bg-white rounded-lg ltr:rounded-xl">
+									<button className="w-40 h-11 lg:w-[19.5rem] lg:h-[5rem] text-lg font-semibold text-black transition duration-200 bg-yellow-primary hover:bg-green-secondary rounded-lg ltr:rounded-xl">
 										{homeContent.heroAdCta}
 									</button>
 								</div>
@@ -135,7 +135,7 @@ const Hero = ({ homeContent, mediaFiles }) => {
 									<p className="text-lg sm:text-2xl lg:text-3xl">
 										{homeContent.heroAdContent2}
 									</p>
-									<button className="w-40 h-11 lg:w-[19.5rem] lg:h-[5rem] text-lg font-semibold text-black transition duration-200 bg-yellow-primary hover:bg-white rounded-lg ltr:rounded-xl">
+									<button className="w-40 h-11 lg:w-[19.5rem] lg:h-[5rem] text-lg font-semibold text-black transition duration-200 bg-yellow-primary hover:bg-green-secondary rounded-lg ltr:rounded-xl">
 										{homeContent.heroAdCta2}
 									</button>
 								</div>
@@ -187,7 +187,7 @@ const Hero = ({ homeContent, mediaFiles }) => {
 									<p className="text-lg sm:text-2xl lg:text-3xl">
 										{homeContent.heroAdContent3}
 									</p>
-									<button className="w-40 h-11 lg:w-[19.5rem] lg:h-[5rem] text-lg font-semibold text-black transition duration-200 bg-yellow-primary hover:bg-white rounded-lg ltr:rounded-xl">
+									<button className="w-40 h-11 lg:w-[19.5rem] lg:h-[5rem] text-lg font-semibold text-black transition duration-200 bg-yellow-primary hover:bg-green-secondary rounded-lg ltr:rounded-xl">
 										{homeContent.heroAdCta3}
 									</button>
 								</div>
@@ -239,7 +239,7 @@ const Hero = ({ homeContent, mediaFiles }) => {
 									<p className="text-lg sm:text-2xl lg:text-3xl">
 										{homeContent.heroAdContent4}
 									</p>
-									<button className="w-40 h-11 lg:w-[19.5rem] lg:h-[5rem] text-lg font-semibold text-black transition duration-200 bg-yellow-primary hover:bg-white rounded-lg ltr:rounded-xl">
+									<button className="w-40 h-11 lg:w-[19.5rem] lg:h-[5rem] text-lg font-semibold text-black transition duration-200 bg-yellow-primary hover:bg-green-secondary rounded-lg ltr:rounded-xl">
 										{homeContent.heroAdCta4}
 									</button>
 								</div>
