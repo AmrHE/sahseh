@@ -144,7 +144,7 @@ const RegisterForm = ({ registerNowData }) => {
 				setSubmitted(true);
 				localStorage.setItem('isSubmitted', true);
 			} catch (error) {
-				console.error('Error submitting form:', error);
+				console.error('Error submitting form:- ', error);
 			}
 		}
 	};
