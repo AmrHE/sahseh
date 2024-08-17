@@ -21,6 +21,7 @@ const AboutUs = ({ aboutPageData }) => {
 		setMediaFiles({
 			...mediaFiles,
 			logo: aboutPageData.logo,
+			whiteLogo: aboutPageData.whiteLogo,
 		});
 	}, [aboutPageData]);
 
@@ -80,11 +81,16 @@ export async function getStaticProps({ locale }) {
 	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz', {
 		locale,
 	});
+	const whiteLogo = await client.getAsset('1hk88EcrYjfrohZJuLEie2', {
+		locale,
+	});
+
 	return {
 		props: {
 			aboutPageData: {
 				aboutPageContent: aboutPageContent.fields,
 				navbar: navbar.fields,
+				whiteLogo: whiteLogo.fields.file,
 				footer: footer.fields,
 				logo: logo.fields.file,
 			},

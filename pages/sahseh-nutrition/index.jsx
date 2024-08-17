@@ -19,6 +19,7 @@ const Nutrition = ({ sahsehNutritionData }) => {
 		setMediaFiles({
 			...mediaFiles,
 			logo: sahsehNutritionData.logo,
+			whiteLogo: sahsehNutritionData.whiteLogo,
 		});
 	}, [sahsehNutritionData]);
 
@@ -75,10 +76,15 @@ export async function getStaticProps({ locale }) {
 	const logo = await client.getAsset('2pn2arIDDrmXgxdHY0O7Tz', {
 		locale,
 	});
+	const whiteLogo = await client.getAsset('1hk88EcrYjfrohZJuLEie2', {
+		locale,
+	});
+
 	return {
 		props: {
 			sahsehNutritionData: {
 				nutritionPageContent: nutritionPageContent.fields,
+				whiteLogo: whiteLogo.fields.file,
 				navbar: navbar.fields,
 				footer: footer.fields,
 				logo: logo.fields.file,
