@@ -67,7 +67,7 @@ const Navbar = () => {
 			<div className="lg:px-5 xl:px-0 xl:container">
 				<div className="items-start content-center justify-between px-5 md:flex lg:px-0 lg:items-center">
 					{/* MOBILE MENU BTN && LOGO */}
-					<div className="flex justify-between xl:w-[320px]">
+					<div className="flex justify-between">
 						{/* MOBILE MENU BUTTON */}
 						<div className="px-5 pt-5 lg:hidden">
 							<motion.button
@@ -117,7 +117,7 @@ const Navbar = () => {
 						{/* LOGO */}
 						<Link href="/">
 							<div className="cursor-pointer ">
-								<div>
+								<div className="xl:mx-8">
 									{mediaFiles.whiteLogo && (
 										<Image
 											src={`http:${mediaFiles?.whiteLogo?.url}`}
@@ -162,9 +162,9 @@ const Navbar = () => {
 							))}
 					</div>
 					{/* CTA && LANGUAGE SWITCHER*/}
-					<div className="items-center justify-between hidden md:flex justify-self-end xl:w-[320px]">
+					<div className="items-center justify-between hidden md:flex justify-self-end">
 						{/* CALL TO ACTION BUTTON */}
-						<div className="hidden md:mx-5 sm:inline-block">
+						<div className="hidden sm:inline-block">
 							<button
 								onClick={() => router.push('/register-now')}
 								className="px-8 py-5 text-sm font-semibold text-black capitalize transition duration-500 lg:text-base hover:bg-green-secondary bg-yellow-primary rounded-xl"
