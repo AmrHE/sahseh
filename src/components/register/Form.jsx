@@ -277,13 +277,14 @@ const RegisterForm = ({ registerNowData }) => {
 											<label className="mb-3 text-[22px]" htmlFor="logoUrl">
 												{registerNowData.registerPageContent.upload}
 											</label>
-											<Field
-												className="bg-[#F1F1F1] border border-solid border-[#F1F1F1] h-[60px] outline-none px-5 rounded-[10px]"
-												id="logoUrl"
-												name="logoUrl"
-												type="file"
-												onChange={handleFileChange}
-											/>
+											<div className="bg-[#F1F1F1] cursor-pointer border border-solid border-[#F1F1F1] h-[60px] outline-none px-5 rounded-[10px] flex items-center">
+												<input
+													id="logoUrl"
+													name="logoUrl"
+													type="file"
+													onChange={handleFileChange}
+												/>
+											</div>
 											<ErrorMessage
 												className="text-sm text-red-600"
 												name="logoUrl"
