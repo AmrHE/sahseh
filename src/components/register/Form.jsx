@@ -17,6 +17,8 @@ const RegisterForm = ({ registerNowData }) => {
 	const [agree, setAgree] = useState(false);
 	const [showAgreeError, setshowAgreeError] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
+	const [file, setFile] = useState(null);
+	const [url, setUrl] = useState(null);
 
 	const validationSchema = Yup.object().shape({
 		orgName: Yup.string().required(
@@ -56,6 +58,59 @@ const RegisterForm = ({ registerNowData }) => {
 		otherCity: Yup.string(),
 	});
 
+	const uploadImageToContentful = async (file) => {
+		const space = await client.getSpace('wuaodgwk96ui');
+		const environment = await space.getEnvironment('master');
+
+		const upload = await environment.createUpload({
+			file: file,
+		});
+		let asset = await environment.createAsset({
+			fields: {
+				title: {
+					'en-US': file.name,
+				},
+				file: {
+					'en-US': {
+						contentType: file.type,
+						fileName: file.name,
+						uploadFrom: {
+							sys: {
+								type: 'Link',
+								linkType: 'Upload',
+								id: upload.sys.id,
+							},
+						},
+					},
+				},
+			},
+		});
+		await asset.processForAllLocales();
+		asset = await environment.getAsset(asset.sys.id);
+		const publishedAsset = await asset.publish();
+		return publishedAsset.fields.file['en-US'].url;
+	};
+
+	const handleFileChange = async (e) => {
+		setFile(e.target.files[0]);
+	};
+
+	useEffect(() => {
+		if (file) {
+			handleUpload();
+		}
+	}, [file]);
+
+	const handleUpload = async () => {
+		if (!file) return;
+		try {
+			const asset = await uploadImageToContentful(file);
+			setUrl(asset);
+		} catch (error) {
+			console.error('Upload failed:', error);
+		}
+	};
+
 	const handleSubmit = async (values) => {
 		if (!agree) {
 			setshowAgreeError(true);
@@ -65,11 +120,14 @@ const RegisterForm = ({ registerNowData }) => {
 				const res = await client
 					.getSpace('wuaodgwk96ui')
 					.then((space) => space.getEnvironment('master'))
-					.then((environment) =>
+					.then((environment) => {
 						environment.createEntry('formSubmissions', {
 							fields: {
 								organizationName: {
 									'en-US': values.orgName,
+								},
+								logoUrl: {
+									'en-US': url,
 								},
 								managerTitle: {
 									'en-US': values.jobTitle,
@@ -101,8 +159,8 @@ const RegisterForm = ({ registerNowData }) => {
 									'en-US': values.howDidYouKnow,
 								},
 							},
-						})
-					);
+						});
+					});
 
 				emailjs
 					.send(
@@ -115,6 +173,7 @@ const RegisterForm = ({ registerNowData }) => {
 							to_email: 'asda8888f@gmail.com',
 							message: `
 								Organization Name: ${values.orgName}, 
+								Organization Logo: ${values.orgName}, 
 								Organization Type: ${
 									values.otherOrg
 										? values.orgType + ': ' + values.otherOrg
@@ -194,22 +253,43 @@ const RegisterForm = ({ registerNowData }) => {
 								</div>
 							) : (
 								<Form>
-									{/* Organization Name */}
-									<div className="flex flex-col mt-5">
-										<label className="mb-3 text-[22px]" htmlFor="orgName">
-											{registerNowData.registerPageContent.orgName}
-										</label>
-										<Field
-											className="bg-[#F1F1F1] border border-solid border-[#F1F1F1] h-[60px] outline-none px-5 rounded-[10px]"
-											id="orgName"
-											name="orgName"
-											type="text"
-										/>
-										<ErrorMessage
-											className="text-sm text-red-600"
-											name="orgName"
-											component="div"
-										/>
+									<div className="flex flex-col md:flex-row md:gap-6">
+										{/* Organization Name */}
+										<div className="flex flex-col mt-5 basis-1/2">
+											<label className="mb-3 text-[22px]" htmlFor="orgName">
+												{registerNowData.registerPageContent.orgName}
+											</label>
+											<Field
+												className="bg-[#F1F1F1] border border-solid border-[#F1F1F1] h-[60px] outline-none px-5 rounded-[10px]"
+												id="orgName"
+												name="orgName"
+												type="text"
+											/>
+											<ErrorMessage
+												className="text-sm text-red-600"
+												name="orgName"
+												component="div"
+											/>
+										</div>
+
+										{/* Organization Logo */}
+										<div className="flex flex-col mt-5 basis-1/2">
+											<label className="mb-3 text-[22px]" htmlFor="logoUrl">
+												{registerNowData.registerPageContent.upload}
+											</label>
+											<Field
+												className="bg-[#F1F1F1] border border-solid border-[#F1F1F1] h-[60px] outline-none px-5 rounded-[10px]"
+												id="logoUrl"
+												name="logoUrl"
+												type="file"
+												onChange={handleFileChange}
+											/>
+											<ErrorMessage
+												className="text-sm text-red-600"
+												name="logoUrl"
+												component="div"
+											/>
+										</div>
 									</div>
 
 									{/* Managers Name */}
@@ -288,13 +368,11 @@ const RegisterForm = ({ registerNowData }) => {
 													outline: 'none',
 													borderRadius: '10px',
 												}}
-												buttonStyle={
-													{
-														// width: '50px',
-														// paddingLeft: '20px',
-														// paddingRight: '20px',
-													}
-												}
+												// buttonStyle={{
+												// 	width: '50px',
+												// 	paddingLeft: '20px',
+												// 	paddingRight: '20px',
+												// }}
 												onlyCountries={['sa', 'eg', 'ae', 'jo', 'bh']}
 												value={props.values.phoneNumber}
 												onChange={(phone) =>
