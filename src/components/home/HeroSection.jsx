@@ -200,7 +200,11 @@ const Hero = ({ homeContent, mediaFiles }) => {
 				</div>
 
 				{/* SLIDER 4 */}
-				<div className="rounded-xl 2xl:-ms-[6.5%]">
+				<div
+					className={`rounded-xl ${
+						currentWidth && currentWidth === 1536 ? '2xl:-ms-[6.5%]' : ''
+					}`}
+				>
 					{mediaFiles.ad3 && (
 						<div className="container relative px-5 md:px-10 lg:px-0">
 							{currentWidth && currentWidth > 1024 ? (
