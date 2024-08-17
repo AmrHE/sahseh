@@ -14,7 +14,7 @@ const Hero = ({ homeContent, mediaFiles }) => {
 
 	const settings = {
 		dots: true,
-		infinite: true,
+		infinite: currentWidth && currentWidth === 1536 ? false : true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		speed: 1000,
@@ -23,6 +23,9 @@ const Hero = ({ homeContent, mediaFiles }) => {
 		pauseOnHover: true,
 		pauseOnFocus: true,
 		swipeToSlide: true,
+		centerMode: true,
+		// className: 'center',
+		// centerPadding: 'auto',
 		// rtl: true,
 	};
 
@@ -197,7 +200,7 @@ const Hero = ({ homeContent, mediaFiles }) => {
 				</div>
 
 				{/* SLIDER 4 */}
-				<div className="rounded-xl">
+				<div className="rounded-xl 2xl:-ms-[6.5%]">
 					{mediaFiles.ad3 && (
 						<div className="container relative px-5 md:px-10 lg:px-0">
 							{currentWidth && currentWidth > 1024 ? (
