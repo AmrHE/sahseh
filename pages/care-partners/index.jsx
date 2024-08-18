@@ -97,21 +97,21 @@ const CarePartners = ({ carePartnersData }) => {
 					}
 				/>
 			</Head>
-			<div className="mx-10 mb-24 lg:mb-44">
+			<div className="mx-10 mb-24">
 				<div>
-					<h1 className="font-bold mt-8 text-2xl mb-6 lg:text-[30px] text-[#1A3129]">
+					<h1 className="font-bold mt-8 text-center lg:text-start text-2xl mb-6 lg:text-[30px] text-[#1A3129]">
 						{carePartnersData.carePartnersContent.title}
 					</h1>
 
-					<div className="flex gap-5 flex-wrap text-lg lg:text-2xl leading-10 text-[#626262] mb-14">
+					<div className="flex flex-wrap justify-center gap-5 text-lg leading-10 lg:justify-start lg:text-2xl mb-14">
 						{types.map((type) => (
 							<p
 								key={type.id}
 								onClick={() => setSelectedFilter(type.id)}
-								className={`bg-[#DEDEDE] bg-opacity-30 py-3 px-9 rounded-xl cursor-pointer ${
+								className={`py-4 px-9 rounded-xl cursor-pointer ${
 									selectedFilter === type.id
 										? 'bg-[#15440D] font-semibold bg-opacity-100 text-white'
-										: ''
+										: 'bg-[#DEDEDE] bg-opacity-30 text-[#626262]'
 								}`}
 							>
 								{type.title}
