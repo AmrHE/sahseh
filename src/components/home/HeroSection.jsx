@@ -40,7 +40,11 @@ const Hero = ({ homeContent, mediaFiles }) => {
 		<div className="min-h-[70vh] sm:min-h-[100vh] lg:pt-52 pt-24 bg-hero-gradient">
 			<Slider ref={sliderRef} arrows={false} {...settings}>
 				{/* SLIDER 1 */}
-				<div className="rounded-xl">
+				<div
+					className={`rounded-xl ${
+						currentWidth && currentWidth === 1536 ? '2xl:ms-[3.5%]' : ''
+					}`}
+				>
 					{mediaFiles.ad1 && (
 						<div className="container relative px-5 md:px-10 lg:px-0">
 							{currentWidth && currentWidth > 1024 ? (
@@ -92,7 +96,11 @@ const Hero = ({ homeContent, mediaFiles }) => {
 				</div>
 
 				{/* SLIDER 2 */}
-				<div className="rounded-xl">
+				<div
+					className={`rounded-xl ${
+						currentWidth && currentWidth === 1536 ? '2xl:ms-[1%]' : ''
+					}`}
+				>
 					{mediaFiles.ad2 && (
 						<div className="container relative px-5 md:px-10 lg:px-0">
 							{currentWidth && currentWidth > 1024 ? (
@@ -144,7 +152,11 @@ const Hero = ({ homeContent, mediaFiles }) => {
 				</div>
 
 				{/* SLIDER 3 */}
-				<div className="rounded-xl">
+				<div
+					className={`rounded-xl ${
+						currentWidth && currentWidth === 1536 ? '2xl:-ms-[1%]' : ''
+					}`}
+				>
 					{mediaFiles.ad3 && (
 						<div className="container relative px-5 md:px-10 lg:px-0">
 							{currentWidth && currentWidth > 1024 ? (
@@ -198,7 +210,7 @@ const Hero = ({ homeContent, mediaFiles }) => {
 				{/* SLIDER 4 */}
 				<div
 					className={`rounded-xl ${
-						currentWidth && currentWidth === 1536 ? '2xl:-ms-[6.5%]' : ''
+						currentWidth && currentWidth === 1536 ? '2xl:-ms-[3.5%]' : ''
 					}`}
 				>
 					{mediaFiles.ad3 && (
