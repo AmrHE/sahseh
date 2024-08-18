@@ -20,6 +20,7 @@ const Nutrition = ({ sahsehNutritionData }) => {
 			...mediaFiles,
 			logo: sahsehNutritionData.logo,
 			whiteLogo: sahsehNutritionData.whiteLogo,
+			nutritionEye: sahsehNutritionData.nutritionEye,
 		});
 	}, [sahsehNutritionData]);
 
@@ -79,6 +80,9 @@ export async function getStaticProps({ locale }) {
 	const whiteLogo = await client.getAsset('1hk88EcrYjfrohZJuLEie2', {
 		locale,
 	});
+	const nutritionEye = await client.getAsset('RrEnPRMLD0grOESjeNYqw', {
+		locale,
+	});
 
 	return {
 		props: {
@@ -88,6 +92,7 @@ export async function getStaticProps({ locale }) {
 				navbar: navbar.fields,
 				footer: footer.fields,
 				logo: logo.fields.file,
+				nutritionEye: nutritionEye.fields.file,
 			},
 		},
 	};

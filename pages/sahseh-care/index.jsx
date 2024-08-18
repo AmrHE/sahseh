@@ -20,6 +20,7 @@ const Care = ({ sahsehCareData }) => {
 			...mediaFiles,
 			logo: sahsehCareData.logo,
 			whiteLogo: sahsehCareData.whiteLogo,
+			careEye: sahsehCareData.careEye,
 		});
 	}, [sahsehCareData]);
 
@@ -79,6 +80,9 @@ export async function getStaticProps({ locale }) {
 	const whiteLogo = await client.getAsset('1hk88EcrYjfrohZJuLEie2', {
 		locale,
 	});
+	const careEye = await client.getAsset('IaWCgTHTGLr1QSjjPR3s4', {
+		locale,
+	});
 
 	return {
 		props: {
@@ -88,6 +92,7 @@ export async function getStaticProps({ locale }) {
 				whiteLogo: whiteLogo.fields.file,
 				footer: footer.fields,
 				logo: logo.fields.file,
+				careEye: careEye.fields.file,
 			},
 		},
 	};

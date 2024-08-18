@@ -28,6 +28,7 @@ const HeroSection = ({ mediaFiles, nutritionContent }) => {
 			/>
 			<Image
 				src={heroImg}
+				width={2500}
 				className="absolute hidden xl:block -z-10 ltr:flip_image"
 				alt="hero"
 				priority

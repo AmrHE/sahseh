@@ -23,10 +23,6 @@ const Hero = ({ homeContent, mediaFiles }) => {
 		pauseOnHover: true,
 		pauseOnFocus: true,
 		swipeToSlide: true,
-		centerMode: true,
-		// className: 'center',
-		// centerPadding: 'auto',
-		// rtl: true,
 	};
 
 	useEffect(() => {
