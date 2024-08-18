@@ -68,8 +68,6 @@ const CarePartners = ({ carePartnersData }) => {
 		},
 	];
 
-	console.log(carePartnersData);
-
 	const { setNavbar, mediaFiles, setMediaFiles, setFooter } =
 		useContentContext();
 
@@ -82,8 +80,6 @@ const CarePartners = ({ carePartnersData }) => {
 			whiteLogo: carePartnersData.whiteLogo,
 		});
 	}, [carePartnersData]);
-
-	console.log(carePartnersData.strategicPartners);
 
 	return (
 		<>

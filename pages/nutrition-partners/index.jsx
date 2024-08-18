@@ -68,8 +68,6 @@ const NutritionPartners = ({ nutritionPartnersData }) => {
 		},
 	];
 
-	console.log(nutritionPartnersData);
-
 	const { setNavbar, mediaFiles, setMediaFiles, setFooter } =
 		useContentContext();
 
@@ -82,8 +80,6 @@ const NutritionPartners = ({ nutritionPartnersData }) => {
 			whiteLogo: nutritionPartnersData.whiteLogo,
 		});
 	}, [nutritionPartnersData]);
-
-	console.log(nutritionPartnersData.strategicPartners);
 
 	return (
 		<>
