@@ -5,6 +5,7 @@ import '../styles/globals.css';
 import Layout from '../src/components/layout/Layout';
 import { ContentContextProvider } from '../src/context/ContentContext';
 import Head from 'next/head';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 function MyApp({ Component, pageProps }) {
 	const { locale } = useRouter();
@@ -29,6 +30,7 @@ function MyApp({ Component, pageProps }) {
 					</Layout>
 				</main>
 			</ContentContextProvider>
+			<SpeedInsights />
 		</>
 	);
 }

@@ -3,9 +3,10 @@ import Image from 'next/image';
 import careEye from '../../../public/care-eye.svg';
 import bg from '../../../public/care-bottom-bg.webp';
 
-const Partners = ({ sahsehCareContent }) => {
+const Partners = ({ sahsehCareContent, mediaFiles }) => {
+	console.log(mediaFiles.careEye);
 	return (
-		<div className="relative mt-24 lg:mt-48 rounded-[20px]">
+		<div className="relative mt-24 lg:mt-48 rounded-[20px] mx-5 lg:mx-0">
 			<div className="container z-50 bg-care_partners-gradient2 rounded-[20px]">
 				<div className="bg-care_partners-gradient lg:pb-16 rounded-[20px]">
 					<div className="flex flex-col items-center justify-center">
@@ -18,7 +19,15 @@ const Partners = ({ sahsehCareContent }) => {
 					</div>
 
 					<div className="relative flex justify-center mt-4">
-						<Image src={careEye} alt="partners" priority />
+						{mediaFiles.careEye && (
+							<Image
+								src={`http:${mediaFiles?.careEye?.url}`}
+								width={mediaFiles?.careEye?.details?.image?.width}
+								height={mediaFiles?.careEye?.details?.image?.height}
+								alt="partners"
+								priority
+							/>
+						)}
 					</div>
 				</div>
 			</div>
