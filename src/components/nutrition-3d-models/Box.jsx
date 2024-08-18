@@ -2,7 +2,8 @@ import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function Box({ isMobile }) {
-	const { nodes, materials } = useGLTF('/nutrition-box.glb');
+	const { nodes, materials } = useGLTF('/nutritionFinal.glb');
+
 	return (
 		<group dispose={null}>
 			<group position={[0, -0.5, 1]} rotation={[-1.38, 0.85, 2.9]}>
@@ -35,7 +36,7 @@ export function Box({ isMobile }) {
 					castShadow
 					receiveShadow
 					geometry={nodes.Object002.geometry}
-					material={materials.M_24___Defaultdxss}
+					material={materials.leftz__}
 					scale={isMobile ? 0.15 : 0.18}
 				/>
 			</group>
@@ -53,7 +54,7 @@ export function Box({ isMobile }) {
 					castShadow
 					receiveShadow
 					geometry={nodes.Object004.geometry}
-					material={materials.M_23___Default}
+					material={materials.leftz}
 					scale={isMobile ? 0.15 : 0.18}
 				/>
 			</group>
@@ -61,4 +62,4 @@ export function Box({ isMobile }) {
 	);
 }
 
-useGLTF.preload('/nutrition-box.glb');
+useGLTF.preload('//nutritionFinal.glb');
