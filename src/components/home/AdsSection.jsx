@@ -15,9 +15,9 @@ const AdsSection = ({ homeContent, mediaFiles }) => {
 					</p>
 					<p className="text-xl lg:text-[26px]">{homeContent.adsText1}</p>
 					<p className="text-xl lg:text-[26px]">{homeContent.adsText2}</p>
-					<p className="mt-10 text-xl font-medium lg:text-4xl text-yellow-dark">
+					{/* <p className="mt-10 text-xl font-medium lg:text-4xl text-yellow-dark">
 						{homeContent.adsHighlight}
-					</p>
+					</p> */}
 				</div>
 
 				<div className="relative mx-5 lg:mx-72">
@@ -26,9 +26,9 @@ const AdsSection = ({ homeContent, mediaFiles }) => {
 						src={adsDecoration}
 						alt="ads-decoration-1"
 					/>
-					<div className="flex items-center justify-center my-10 bg-white lg:p-20 py-11">
+					{/* <div className="flex items-center justify-center my-10 bg-white lg:p-20 py-11">
 						<Image src={adsLogos} alt="ads" />
-					</div>
+					</div> */}
 					<Image
 						className="hidden lg:absolute -right-48 -top-32 "
 						src={adsDecoration}
