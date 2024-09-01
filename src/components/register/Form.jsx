@@ -173,7 +173,7 @@ const RegisterForm = ({ registerNowData }) => {
 							to_email: 'asda8888f@gmail.com',
 							message: `
 								Organization Name: ${values.orgName}, 
-								Organization Logo: ${values.orgName}, 
+								Organization Logo: ${url}, 
 								Organization Type: ${
 									values.otherOrg
 										? values.orgType + ': ' + values.otherOrg
